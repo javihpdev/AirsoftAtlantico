@@ -34,12 +34,16 @@
 
         }catch(error){
             console.error("Error al enviar mensaje:", error);
+        } finally{
+            isLoading = false;
         }
 
     }
 
 </script>
-<div class="flex p-10" style="background-image: url('/images/galleryImages/_M1A3352.jpg'); background-size: cover; background-position: center;">
+
+
+<div class="flex p-10" style="background-image: url('/images/galleryImages/_14A1029.jpg'); background-size: cover; background-position: center;">
     <div class="flex flex-col text-white gap-10 w-full">
         <h2>CONTÁCTANOS</h2>
         <p>Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
@@ -50,6 +54,6 @@
         <Input bind:value={email} type="email" placeholder="Tu correo electrónico" />
         <Input bind:value={asunto} type="text" placeholder="Asunto" />
         <textarea bind:value={message} placeholder="Tu mensaje" rows="7" cols="50" class="outline-none border-2 text-xl p-2 text-white bg-gray-800 caret-blue-500 rounded-b-lg"></textarea>
-        <button onclick={sendMessage} type="submit" class="p-3 bg-green-500 w-20 rounded-xl cursor-pointer text-center">{isLoading ? "Enviando Mensaje..." : "Enviar"}</button>
+        <button onclick={sendMessage} type="submit" class="p-3 bg-green-500 w-20 rounded-xl cursor-pointer font-arial text-center">{isLoading ? "Enviando Mensaje..." : "Enviar"}</button>
 	</div>
 </div>

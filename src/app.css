@@ -3,3 +3,46 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Importar la fuente personalizada desde Google Fonts */
+@font-face {
+  font-family: 'BF Modernista Regular';
+  src: url('/fonts/BF_Modernista-Regular.ttf') format('truetype');
+  font-weight:normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BF Modernista Bold';
+  src: url('/fonts/BF_Modernista-Bold.ttf') format('truetype');
+  font-weight:normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BF Modernista Light';
+  src: url('/fonts/BF_Modernista-Light.ttf') format('truetype');
+  font-weight:normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+  :root {
+ font-family:'BF Modernista Regular', normal;
+}
+
+.font-bf-modernista-bold {
+  font-family: 'BF Modernista Bold', normal
+}
+
+.font-bf-modernista-light {
+  font-family: 'BF Modernista Light', normal
+}

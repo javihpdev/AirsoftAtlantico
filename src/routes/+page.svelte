@@ -12,7 +12,9 @@
 
 
 	<!-- Imagen que ira mas abajo de informacion con algun texto en absoluto -->
-	<div class="flex w-full min-h-screen">
+	<div class="flex w-full min-h-screen relative justify-center items-center overflow-hidden">
+		<img class="absolute bottom-10 text-white text-[4rem] text-center" src="images/logo.png" alt="logo" width="100">
+		<p class="absolute top-40 text-white  text-[4rem] text-center">ASOCIACION DE AIRSOFT DEL ATLANTICO</p>
 		<img src="images/galleryImages/_M1A3364.jpg" alt="">
 	</div>
 
@@ -20,7 +22,6 @@
 	<!-- seccion de los modos de juego -->
 
 	<section id="gameMode" class="flex w-full justify-center items-center">
-
 		<h2>MODOS DE JUEGO</h2>
 
 	</section>
