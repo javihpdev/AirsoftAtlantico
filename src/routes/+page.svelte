@@ -1,7 +1,9 @@
 <script>
 	import Footer from "$lib/components/web/common/Footer.svelte";
-	import NavBar from "$lib/components/web/common/NavBar.svelte";
-    import Contact from "$lib/components/web/common/Contact.svelte";
+	import Contact from "$lib/components/web/common/Contact.svelte";
+	import Rules from "./rulesAirsoft/Rules.svelte";
+
+	
 </script>
 
 <section class="flex h-full w-full flex-col mt-30 justify-center items-center ">
@@ -23,6 +25,11 @@
 
 	</section>
 
+	<!-- seccion de reglas -->
+
+	<section id="rules" class="flex w-full justify-center items-center scroll-mt-32">
+		<Rules/>
+	</section>
 
 	<!-- seccion de imagenes varias que van apareciendo -->
 
@@ -38,9 +45,13 @@
 		<h2>NOSOTROS</h2>
 	</section>
 	
+<div id="contact" class="w-full scroll-m-32">
 
 	<Contact/>
-	
-	<Footer/>
+</div>
+	<div id="footer" class="w-full mt-10">
+
+		<Footer/>
+	</div>
 </section>
 

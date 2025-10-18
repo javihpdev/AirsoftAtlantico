@@ -39,10 +39,11 @@
     }
 
 </script>
-<div class="flex p-10 bg-gray-800">
+<div class="flex p-10" style="background-image: url('/images/galleryImages/_M1A3352.jpg'); background-size: cover; background-position: center;">
     <div class="flex flex-col text-white gap-10 w-full">
         <h2>CONTÁCTANOS</h2>
         <p>Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
+        <p>Lugar del Campo: La Guancha </p>
     </div>
 	<div class="flex flex-col gap-2 w-150 ">
         <Input bind:value={name} type="text" placeholder="Tu nombre" class="rounded-t-lg" />

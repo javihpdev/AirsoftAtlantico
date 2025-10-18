@@ -1,7 +1,7 @@
 import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types.js';
 import nodemailer from 'nodemailer';
-import { EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS, EMAIL_FROM } from '$env/static/private';
+import { EMAIL_HOST , EMAIL_FROM, EMAIL_PASS, EMAIL_PORT, EMAIL_USER } from '$env/static/private';
 
 export const POST: RequestHandler = async ({ request }) => {
     try {
