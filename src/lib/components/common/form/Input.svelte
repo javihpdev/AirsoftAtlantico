@@ -12,4 +12,4 @@
 </script>
 
 
-<input type={type} value={value} placeholder={placeholder} class=" border-2 text-xl p-2 text-white bg-gray-800 caret-blue-500 outline-none {addClass}" />
+<input type={type} value={value} placeholder={placeholder} class="text-xl p-2 text-white bg-gray-800 caret-white outline-none {addClass}" />

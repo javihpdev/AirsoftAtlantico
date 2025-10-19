@@ -18,7 +18,7 @@
 
 
 {#if isOpen}
-<button onclick={toggleSection} class="flex flex-col max-w-4xl mx-auto p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
+<div  class="flex flex-col max-w-4xl mx-auto p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
     <img src="images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
     <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
 
@@ -200,12 +200,11 @@
         <p class="text-gray-800">
             Cualquier duda, sugerencia o idea es bienvenida, ponte en contacto con nosotros en el apartado 
         </p>
-        <a href="#contact" class="text-blue-600 underline">CONTACTO🫡 </a>
+        <a href="#contact" class="text-blue-600 ">CONTACTO</a>🫡
     </div>
+    <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
 
-    <div class="flex">
-    </div>
-</button>
+</div>
 {:else}
 <div class="flex flex-col">
     <div class="mt-4 p-4 bg-gray-100 rounded-lg">   <p class="text-gray-800">Las reglas están ocultas.</p></div>

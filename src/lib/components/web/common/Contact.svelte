@@ -43,17 +43,18 @@
 </script>
 
 
-<div class="flex p-10" style="background-image: url('/images/galleryImages/_14A1029.jpg'); background-size: cover; background-position: center;">
-    <div class="flex flex-col text-white gap-10 w-full">
-        <h2>CONTÁCTANOS</h2>
-        <p>Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-        <p>Lugar del Campo: La Guancha </p>
+<div class="relative flex p-10" style="background-image: url('/images/galleryImages/_14A1029.webp'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    <div class="flex flex-col relative text-white gap-10 w-full">
+        <h2 class="text-2xl">CONTÁCTANOS</h2>
+        <p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
+        <p class="text-2xl">LOCALIZACIÓN: Mirador El Mazape, San Juan de la Rambla.</p>
     </div>
-	<div class="flex flex-col gap-2 w-150 ">
-        <Input bind:value={name} type="text" placeholder="Tu nombre" class="rounded-t-lg" />
-        <Input bind:value={email} type="email" placeholder="Tu correo electrónico" />
+	<div class="flex flex-col relative gap-2 w-150 ">
+        <Input bind:value={name} type="text" placeholder="Nombre" class="rounded-t-lg" />
+        <Input bind:value={email} type="email" placeholder="Correo electrónico" />
         <Input bind:value={asunto} type="text" placeholder="Asunto" />
-        <textarea bind:value={message} placeholder="Tu mensaje" rows="7" cols="50" class="outline-none border-2 text-xl p-2 text-white bg-gray-800 caret-blue-500 rounded-b-lg"></textarea>
+        <textarea bind:value={message} placeholder="Tu mensaje" rows="7" cols="50" class="outline-none text-xl p-2 text-white bg-gray-800 caret-white rounded-b-lg"></textarea>
         <button onclick={sendMessage} type="submit" class="p-3 bg-green-500 w-20 rounded-xl cursor-pointer font-arial text-center">{isLoading ? "Enviando Mensaje..." : "Enviar"}</button>
 	</div>
 </div>
