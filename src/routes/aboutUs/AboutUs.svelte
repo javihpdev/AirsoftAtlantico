@@ -21,7 +21,7 @@
             <div class="bg-white p-8 rounded-lg shadow-lg">
                 <h3 class="text-2xl font-bold mb-4 text-gray-900">¿Quiénes Somos?</h3>
                 <p class="text-gray-700 mb-4">
-                    Somos una asociación dedicada al deporte del airsoft en la zona del Atlántico. 
+                    Somos una asociación dedicada al deporte del airsoft en Tenerife. 
                     Organizamos partidas regulares en un entorno natural privilegiado.
                 </p>
                 <p class="text-gray-700">
@@ -32,6 +32,9 @@
             
             <div class="bg-white p-8 rounded-lg shadow-lg">
                 <h3 class="text-2xl font-bold mb-4 text-gray-900">Nuestra Ubicación</h3>
+                <p class="text-gray-700 mb-4">
+                    <strong>🏟️ Nombre del Campo:</strong> RAID
+                </p>
                 <p class="text-gray-700 mb-4">
                     <strong>📍 Dirección:</strong> Mirador El Mazape, San Juan de la Rambla
                 </p>
