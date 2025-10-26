@@ -208,7 +208,7 @@
 {:else}
 <div class="flex flex-col">
     <div class="mt-4 p-4 bg-gray-100 rounded-lg">   <p class="text-gray-800">Las reglas están ocultas.</p></div>
-    <button class="mt-2 cursor-pointer rounded-lg p-3 bg-green-500 text-white" onclick={toggleSection}>Mostrar Reglas</button>
+    <button class="mt-2 cursor-pointer rounded-lg p-3 bg-[#00ACC9] text-white" onclick={toggleSection}>Mostrar Reglas</button>
 </div>
 
 {/if}

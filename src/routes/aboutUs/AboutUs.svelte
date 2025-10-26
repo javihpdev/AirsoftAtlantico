@@ -11,7 +11,7 @@
     const embedUrl = `https://www.google.com/maps?q=${latitude},${longitude}&hl=es&z=15&output=embed`;
 </script>
 
-<section class="w-full p-8 bg-gray-50">
+<div class="w-full p-8">
     <div class="max-w-6xl mx-auto">
         <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">SOBRE NOSOTROS</h2>
         <p class="text-xl text-center mb-12 text-gray-700">Asociación de Airsoft del Atlántico</p>
@@ -37,12 +37,6 @@
                 </p>
                 <p class="text-gray-700 mb-4">
                     <strong>📍 Dirección:</strong> Mirador El Mazape, San Juan de la Rambla
-                </p>
-                <p class="text-gray-700 mb-4">
-                    <strong>📧 Email:</strong> asociacionairsoftatlantico@gmail.com
-                </p>
-                <p class="text-gray-700">
-                    <strong>📱 WhatsApp:</strong> +34 674 957 386
                 </p>
             </div>
         </div>
@@ -71,7 +65,7 @@
                     href={googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="flex items-center gap-2 px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
+                    class="flex items-center gap-2 px-6 py-3  text-white rounded-lg bg-[#00ACC9] hover:bg-gray-800 transition-colors duration-600 shadow-lg"
                 >
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -81,4 +75,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

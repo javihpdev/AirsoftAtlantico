@@ -2,10 +2,25 @@
 	import Link from "$lib/components/common/form/Link.svelte";
 
   let isOpen = $state(false);
+  let isGameModesOpen = $state(false);
 
   function toggleMenu() {
    isOpen = !isOpen
   }
+
+    function toggleGameModes() {
+    isGameModesOpen = !isGameModesOpen
+  }
+
+  // Lista de modos de juego
+  const gameModes = [
+    { name: 'Team Deathmatch', href: '#team-deathmatch' },
+    { name: 'Captura la Bandera', href: '#captura-bandera' },
+    { name: 'Dominación', href: '#dominacion' },
+    { name: 'Búsqueda y Destrucción', href: '#busqueda-destruccion' },
+    { name: 'Free For All', href: '#free-for-all' },
+    { name: 'King of the Hill', href: '#king-hill' }
+  ];
 
 
 
@@ -13,7 +28,7 @@
 
 
 
-<nav class="flex w-full lg:flex-row flex-col gap-2 p-3 justify-center z-50 items-center lg:p-2  lg:gap-10 bg-gray-800 text-white">
+<nav class="flex w-full max-w-[90%] md:max-w-full lg:flex-row flex-col gap-2 p-3 justify-center z-50 items-center lg:p-2 lg:gap-10 bg-gray-800 text-white">
   
   <div class="flex overflow-hidden justify-center items-center rounded-full">
     <img class="object-fill" src="/images/logo.png" alt="logo" width="85" height="85"/>
@@ -21,7 +36,19 @@
   <div class="hidden lg:flex justify-center items-center">
     <div class="flex  gap-20 justify-center items-center text-lg">
       <Link href="/">INICIO</Link>
-      <Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
+       <!-- Desplegable para desktop -->
+      <div class="relative">
+        <button class="tracking-[2px] hover:text-gray-300 transition-colors duration-700 cursor-pointer" onclick={toggleGameModes}>
+          MODOS DE JUEGO {isGameModesOpen ? '▴' : '▾'}
+          <div class="absolute left-0 mt-2 w-60 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 {isGameModesOpen ? 'opacity-100' : 'hidden'}">
+            {#each gameModes as mode}
+            <Link href={mode.href} class="block px-4 py-3 hover:bg-gray-600 first:rounded-t-lg last:rounded-b-lg">
+              {mode.name}
+            </Link>
+            {/each}
+          </div>
+        </button>
+      </div>
       <Link href="#rules">REGLAS</Link>
       <Link href="#galleryImages">IMÁGENES</Link>
       <Link href="#aboutUs">NOSOTROS</Link>
