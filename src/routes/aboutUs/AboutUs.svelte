@@ -1,14 +1,15 @@
 <script>
     // Coordenadas del Mirador El Mazape
-    const latitude = 28.39008543229673;
-    const longitude = -16.62935377304104;
+    
+    const latitude = 28.389735584930182;
+    const longitude = -16.629758936999046;
     const placeName = "Mirador El Mazape, La Guancha";
     
     // URL para abrir en Google Maps
     const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
     
     // URL correcta para el iframe
-    const embedUrl = `https://www.google.com/maps?q=${latitude},${longitude}&hl=es&z=15&output=embed`;
+    const embedUrl = `https://www.google.com/maps?q=${latitude},${longitude}&hl=es&z=15&output=embed&t=k`;
 </script>
 
 <div class="w-full p-8">
@@ -35,9 +36,11 @@
                 <p class="text-gray-700 mb-4">
                     <strong>🏟️ Nombre del Campo:</strong> RAID
                 </p>
-                <p class="text-gray-700 mb-4">
-                    <strong>📍 Dirección:</strong> Mirador El Mazape, San Juan de la Rambla
-                </p>
+                <a href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046" target="_blank" rel="noopener noreferrer">
+                    <p class="text-gray-700 mb-4">
+                        <strong>📍 Dirección:</strong> Mirador El Mazape, San Juan de la Rambla
+                    </p>
+                </a>
             </div>
         </div>
 

@@ -8,6 +8,10 @@
    isOpen = !isOpen
   }
 
+  function closeMenu() {
+    isOpen = false
+  }
+
     function toggleGameModes() {
     isGameModesOpen = !isGameModesOpen
   }
@@ -28,7 +32,7 @@
 
 
 
-<nav class="flex w-full max-w-[90%] md:max-w-full lg:flex-row flex-col gap-2 p-3 justify-center z-50 items-center lg:p-2 lg:gap-10 bg-gray-800 text-white">
+<nav class="flex w-full max-w-full lg:flex-row flex-col gap-2 p-3  justify-center z-100 items-center lg:p-2 lg:gap-10 bg-gray-800 text-white">
   
   <div class="flex overflow-hidden justify-center items-center rounded-full">
     <img class="object-fill" src="/images/logo.png" alt="logo" width="85" height="85"/>
@@ -37,7 +41,7 @@
     <div class="flex  gap-20 justify-center items-center text-lg">
       <Link href="/">INICIO</Link>
        <!-- Desplegable para desktop -->
-      <div class="relative">
+      <div class="relative z-50">
         <button class="tracking-[2px] hover:text-gray-300 transition-colors duration-700 cursor-pointer" onclick={toggleGameModes}>
           MODOS DE JUEGO {isGameModesOpen ? '▴' : '▾'}
           <div class="absolute left-0 mt-2 w-60 bg-gray-700 rounded-lg shadow-lg transition-all duration-300 {isGameModesOpen ? 'opacity-100' : 'hidden'}">
@@ -56,7 +60,7 @@
     </div>
   </div>
   
-  <div class="flex flex-col lg:flex-row justify-center items-center">
+  <div class="flex flex-col lg:flex-row justify-center items-center outline-none">
         <!-- Botón hamburguesa con animación -->
        <!-- Este padding es para separar la hamburguesa de la imagen de historiatelo -->
        <div class="-translate-y-0.5 lg:pt-0">
@@ -70,12 +74,24 @@
       <!-- Menu con los links al desplegar el menu hamburguesa -->
       <div class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
       <div class="flex flex-col lg:hidden items-center gap-5 p-4 text-lg ">
-        <Link href="/">INICIO</Link>
-            <Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
-            <Link href="#rules">REGLAS</Link>
-            <Link href="#galleryImages">IMÁGENES</Link>
-            <Link href="#about">NOSOTROS</Link>
-            <Link href="#contact">CONTACTO</Link>
+              <div onclick={closeMenu}>
+              <Link href="/">INICIO</Link>
+            </div>
+            <div onclick={closeMenu}>
+              <Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
+            </div>
+            <div onclick={closeMenu}>
+              <Link href="#rules">REGLAS</Link>
+            </div>
+            <div onclick={closeMenu}>
+              <Link href="#galleryImages">IMÁGENES</Link>
+            </div>
+            <div onclick={closeMenu}>
+              <Link href="#aboutUs">NOSOTROS</Link>
+            </div>
+            <div onclick={closeMenu}>
+              <Link href="#contact">CONTACTO</Link>
+            </div>
       </div>
       </div>
   </div>

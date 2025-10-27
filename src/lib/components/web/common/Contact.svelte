@@ -43,14 +43,19 @@
 </script>
 
 
-<div class="relative flex p-10" style="background-image: url('/images/galleryImages/_14A1029.jpg'); background-size: cover; background-position: center;">
-    <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
-    <div class="flex flex-col relative text-white gap-10 w-full">
+<div class="relative flex flex-col md:flex-row p-10 justify-center gap-5 w-full max-w-full bg-cover bg-center md:bg-[center_bottom_0px]" style="background-image: url('/images/galleryImages/_14A1029.avif');">
+    <!-- div de fondo oscuro para oscurecer la imagen, si lo hago con opacidad se queda TODO opaco -->
+    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="flex flex-col relative text-white gap-5 md:gap-10 w-200 max-w-full">
         <h2 class="text-2xl">CONTÁCTANOS</h2>
         <p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-        <p class="text-2xl">LOCALIZACIÓN: Mirador El Mazape, San Juan de la Rambla.</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046" target="_blank" rel="noopener noreferrer">
+                    <p class="mb-4 text-2xl hover:scale-105 transition-all duration-700">
+                        <strong>LOCALIZACIÓN:</strong> Mirador El Mazape, San Juan de la Rambla.
+                    </p>
+                </a>
     </div>
-	<div class="flex flex-col relative gap-2 md:w-150 w-100  max-w-full">
+	<div class="flex flex-col relative gap-2 w-full md:w-150 ">
         <Input bind:value={name} type="text" placeholder="Nombre" class="rounded-t-lg" />
         <Input bind:value={email} type="email" placeholder="Correo electrónico" />
         <Input bind:value={asunto} type="text" placeholder="Asunto" />
