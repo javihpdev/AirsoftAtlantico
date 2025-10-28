@@ -1,12 +1,12 @@
 <script lang="ts">
     function downloadFile(){
-    const link = document.createElement('a');
-    link.href = '/AirsoftAtlantico/files/Asociación de  Airsoft del Atlántico.pdf';
-    link.download = 'Asociación de  Airsoft del Atlántico.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
+		const link = document.createElement('a');
+		link.href = '/files/Asociación de  Airsoft del Atlántico.pdf';
+		link.download = 'Asociación de  Airsoft del Atlántico.pdf';
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	}
 
 
     let isOpen = $state(false);
@@ -85,7 +85,7 @@
             </li>
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-gray
+                <span class="text-gray-800">Réplicas cuerpo a cuerpo (cuchillos) no se pueden lanzar, solo tocando y no pueden ser reales.</span>
             </li>
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
