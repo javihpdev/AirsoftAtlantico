@@ -47,30 +47,24 @@
 
 <div
   class="relative flex flex-col md:flex-row p-10 justify-center gap-5 w-full max-w-full bg-cover bg-center"
-  style="
-    background-image: url('/AirsoftAtlantico/images/galleryImages/_14A1029.avif');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    min-height: 400px;
-  "
+  style="background-image: url('/AirsoftAtlantico/images/galleryImages/_14A1029.avif'); background-size: cover; background-position: center center; background-repeat: no-repeat; min-height: 400px;"
 >
-    <!-- Overlay oscuro -->
-    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+    <!-- Fondo oscuro más intenso -->
+    <div class="absolute inset-0 bg-black/60"></div>
     <div class="flex flex-col relative text-white gap-5 md:gap-10 w-200 max-w-full z-10">
         <h2 class="text-2xl">CONTÁCTANOS</h2>
         <p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
         <a href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046" target="_blank" rel="noopener noreferrer">
-                    <p class="mb-4 text-2xl hover:scale-105 transition-all duration-700">
-                        <strong>LOCALIZACIÓN:</strong> Mirador El Mazape, San Juan de la Rambla.
-                    </p>
-                </a>
+            <p class="mb-4 text-2xl hover:scale-105 transition-all duration-700">
+                <strong>LOCALIZACIÓN:</strong> Mirador El Mazape, San Juan de la Rambla.
+            </p>
+        </a>
     </div>
-	<div class="flex flex-col relative gap-2 w-full md:w-150 z-10">
+    <div class="flex flex-col relative gap-2 w-full md:w-150 z-10">
         <Input bind:value={name} type="text" placeholder="Nombre" class="rounded-t-lg" />
         <Input bind:value={email} type="email" placeholder="Correo electrónico" />
         <Input bind:value={asunto} type="text" placeholder="Asunto" />
         <textarea bind:value={message} placeholder="Tu mensaje" rows="7" cols="50" class="outline-none text-xl p-2 text-white bg-gray-800 caret-white rounded-b-lg"></textarea>
         <button onclick={sendMessage} type="submit" class="p-3 bg-[#00ACC9] w-20 rounded-xl cursor-pointer font-arial text-center">{isLoading ? "Enviando Mensaje..." : "Enviar"}</button>
-	</div>
+    </div>
 </div>
