@@ -91,7 +91,7 @@
 
     <div class="flex flex-wrap gap-6 w-full items-start">
         {#each modes as mode}
-            <article class={`rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300 flex-grow-0 w-full sm:w-[48%] lg:w-[48%] min-w-[320px] max-w-[600px]`}>
+            <article id={mode.id} class={`rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300 flex-grow-0 w-full sm:w-[48%] lg:w-[48%] min-w-[320px] max-w-[600px]`}>
                 <div class="flex items-start gap-4">
                     <!-- Icono sencillo -->
                     <div class="flex-shrink-0">
