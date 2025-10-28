@@ -61,9 +61,9 @@
 				<img
 					src={photo}
 					alt="Airsoft Atlántico {index + 1}"
-                    loading='lazy'
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-				/>
+					loading="eager"
+					/>
 			</button>
 		{/each}
 	</div>
@@ -99,7 +99,6 @@
 			src={selectedImage}
 			alt="Imagen ampliada"
 			class="max-h-full max-w-full"
-			loading="lazy"
 		/>
 	</div>
 {/if}

@@ -32,7 +32,7 @@
 <section class="flex h-full w-full flex-col max-w-full justify-center items-center">
     
     <!-- Imagen con texto y efecto parallax suave -->
-    <div class="w-full h-screen relative overflow-hidden outline-none bg-gray-800">
+    <div class="w-full h-screen relative overflow-hidden bg-gray-800">
         <p 
             class="absolute md:top-20 top-10 left-1/2 -translate-x-1/2 text-white text-[2rem] md:text-[4rem] lg:text-[4rem] text-center z-10 drop-shadow-2xl px-4"
             style="opacity: {Math.max(0, 1 - scrollY / 400)}"
@@ -49,7 +49,7 @@
 
     <section class="flex relative flex-col gap-2 text-4xl font-bold text-center w-full overflow-hidden justify-center items-center">
         <img 
-            src="images/galleryImages/_M1A3381.avif" 
+            src="images/galleryImages/_M1A3535.avif" 
             alt="foto presentación" 
             class="z-10 absolute min-w-full min-h-full object-cover"
         />

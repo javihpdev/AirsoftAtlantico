@@ -74,24 +74,24 @@
       <!-- Menu con los links al desplegar el menu hamburguesa -->
       <div class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
       <div class="flex flex-col lg:hidden items-center gap-5 p-4 text-lg ">
-              <div onclick={closeMenu}>
+              <button onclick={closeMenu}>
               <Link href="/">INICIO</Link>
-            </div>
-            <div onclick={closeMenu}>
+            </button>
+            <button onclick={closeMenu}>
               <Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
-            </div>
-            <div onclick={closeMenu}>
+            </button>
+            <button onclick={closeMenu}>
               <Link href="#rules">REGLAS</Link>
-            </div>
-            <div onclick={closeMenu}>
+            </button>
+            <button onclick={closeMenu}>
               <Link href="#galleryImages">IMÁGENES</Link>
-            </div>
-            <div onclick={closeMenu}>
+            </button>
+            <button onclick={closeMenu}>
               <Link href="#aboutUs">NOSOTROS</Link>
-            </div>
-            <div onclick={closeMenu}>
+            </button>
+            <button onclick={closeMenu}>
               <Link href="#contact">CONTACTO</Link>
-            </div>
+            </button>
       </div>
       </div>
   </div>
