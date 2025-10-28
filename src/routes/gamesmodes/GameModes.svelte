@@ -1,13 +1,6 @@
 <script lang="ts">
     import { fade } from 'svelte/transition';
 
-    let videoElement: HTMLVideoElement | null = $state(null);
-    $effect(() => {
-        if (videoElement) {
-            videoElement.volume = 0.08;
-        }
-    });
-
     // Datos de los modos disponibles
     const modes = [
         {
@@ -39,7 +32,7 @@
                 'Cada eliminación suma puntos al equipo contrario.',
                 'Respawns según normas (limitados o ilimitados).'
             ],
-            video: 'videos/videoplayback.mp4',
+            video: 'videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4',
             color: 'bg-rose-500/10'
         },
         {
@@ -76,9 +69,17 @@
         }
     ];
 
-    let openMode = $state(''); // id del modo abierto
+    let openMode = ''; // id del modo abierto
+
     function toggleMode(id: string) {
         openMode = openMode === id ? '' : id;
+    }
+
+    function handleVideoLoad(event: Event) {
+        const video = event.target as HTMLVideoElement;
+        if (video) {
+            video.volume = 0.08;
+        }
     }
 </script>
 
@@ -88,9 +89,9 @@
         <p class="text-gray-600 mt-2">Reglas, objetivos y formato de las partidas en nuestro campo.</p>
     </header>
 
-    <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
+    <div class="flex flex-wrap gap-6 w-full items-start">
         {#each modes as mode}
-            <article id={mode.id} class={`scroll-mt-32 rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300`}>
+            <article class={`rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300 flex-grow-0 w-full sm:w-[48%] lg:w-[48%] min-w-[320px] max-w-[600px]`}>
                 <div class="flex items-start gap-4">
                     <!-- Icono sencillo -->
                     <div class="flex-shrink-0">
@@ -112,7 +113,6 @@
                             <span>{mode.title}</span>
                             <button
                                 class="ml-4 px-3 py-1 text-sm rounded-md bg-white/10 hover:bg-white/20 transition-colors"
-                                aria-expanded={openMode === mode.id}
                                 onclick={() => toggleMode(mode.id)}
                             >
                                 {openMode === mode.id ? 'Cerrar' : 'Ver más'}
@@ -125,7 +125,7 @@
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div>
                                         <h4 class="text-sm font-semibold text-gray-800">🎯 Objetivos</h4>
-                                        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                        <ul class="text-gray-700 mt-2 space-y-1">
                                             {#each mode.objectives as obj}
                                                 <li>{obj}</li>
                                             {/each}
@@ -133,22 +133,21 @@
                                     </div>
                                     <div>
                                         <h4 class="text-sm font-semibold text-gray-800">📋 Reglas</h4>
-                                        <ul class="list-disc list-inside text-gray-700 mt-2 space-y-1">
+                                        <ul class="text-gray-700 mt-2 space-y-1">
                                             {#each mode.rules as rules}
                                                 <li>{rules}</li>
                                             {/each}
                                         </ul>
                                     </div>
                                 </div>
-
                                 <div class="mt-3">
                                     <div class="rounded-md overflow-hidden border border-gray-200">
                                         <video
-                                            bind:this={videoElement}
                                             src={mode.video}
                                             controls
                                             controlsList="nodownload"
                                             class="w-full h-48 object-cover bg-black"
+                                            onloadedmetadata={handleVideoLoad}
                                         >
                                             <track kind="captions" srclang="es" label="Español" />
                                         </video>
