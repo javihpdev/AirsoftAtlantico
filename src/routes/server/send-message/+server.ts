@@ -9,7 +9,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
         // Configurar el transporte de nodemailer
         const transporter = nodemailer.createTransport({
-            host: EMAIL_HOST,
+            host: EMAIL_USER,
             port: parseInt(EMAIL_PORT),
             secure: false, // true para 465, false para otros puertos
             auth: {
