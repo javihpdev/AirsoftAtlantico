@@ -52,11 +52,12 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    min-height: 400px;
   "
 >
-    <!-- div de fondo oscuro para oscurecer la imagen, si lo hago con opacidad se queda TODO opaco -->
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="flex flex-col relative text-white gap-5 md:gap-10 w-200 max-w-full">
+    <!-- Overlay oscuro -->
+    <div class="absolute inset-0 bg-black/40 pointer-events-none"></div>
+    <div class="flex flex-col relative text-white gap-5 md:gap-10 w-200 max-w-full z-10">
         <h2 class="text-2xl">CONTÁCTANOS</h2>
         <p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
         <a href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046" target="_blank" rel="noopener noreferrer">
@@ -65,7 +66,7 @@
                     </p>
                 </a>
     </div>
-	<div class="flex flex-col relative gap-2 w-full md:w-150 ">
+	<div class="flex flex-col relative gap-2 w-full md:w-150 z-10">
         <Input bind:value={name} type="text" placeholder="Nombre" class="rounded-t-lg" />
         <Input bind:value={email} type="email" placeholder="Correo electrónico" />
         <Input bind:value={asunto} type="text" placeholder="Asunto" />
