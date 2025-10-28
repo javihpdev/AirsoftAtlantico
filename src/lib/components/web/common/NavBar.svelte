@@ -33,11 +33,11 @@
 <nav class="flex w-full max-w-full lg:flex-row flex-col gap-2 p-3  justify-center z-100 items-center lg:p-2 lg:gap-10 bg-gray-800 text-white">
   
   <div class="flex overflow-hidden justify-center items-center rounded-full">
-    <img class="object-fill" src="/AirsoftAtlantico/images/logo.png" alt="logo" width="85" height="85"/>
+    <img class="object-fill" src="images/logo.png" alt="logo" width="85" height="85"/>
   </div>
   <div class="hidden lg:flex justify-center items-center">
     <div class="flex  gap-20 justify-center items-center text-lg">
-      <Link href="/AirsoftAtlantico/">INICIO</Link>
+      <Link href="/">INICIO</Link>
        <!-- Desplegable para desktop -->
       <div class="relative z-50">
         <button class="tracking-[2px] hover:text-gray-300 transition-colors duration-700 cursor-pointer" onclick={toggleGameModes}>

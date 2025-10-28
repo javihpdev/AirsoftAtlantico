@@ -40,7 +40,7 @@
             ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO
         </p>
         <img 
-            src="/AirsoftAtlantico/images/galleryImages/_M1A3364.avif" 
+            src="images/galleryImages/_M1A3364.avif" 
             alt="foto inicio" 
             class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
             style="transform: translate(0%, calc(-0% + {scrollY * 0.3}px))"
@@ -49,7 +49,7 @@
 
     <section class="flex relative flex-col gap-2 text-4xl font-bold text-center w-full overflow-hidden justify-center items-center">
         <img 
-            src="/AirsoftAtlantico/images/galleryImages/_M1A3535.avif" 
+            src="images/galleryImages/_M1A3535.avif" 
             alt="foto presentación" 
             class="z-10 absolute min-w-full min-h-full object-cover"
         />

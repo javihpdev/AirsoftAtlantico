@@ -17,7 +17,7 @@
                 'Un compañero puede recuperar la bandera caída.',
                 'No ocultar ni enterrar la bandera.'
             ],
-            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
+            video: 'videos/videoplayback.mp4',
             color: 'bg-emerald-500/10'
         },
         {
@@ -32,7 +32,7 @@
                 'Cada eliminación suma puntos al equipo contrario.',
                 'Respawns según normas (limitados o ilimitados).'
             ],
-            video: '/AirsoftAtlantico/videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4',
+            video: 'videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4',
             color: 'bg-rose-500/10'
         },
         {
@@ -47,7 +47,7 @@
                 'La baja solo cuenta si la placa es recogida.',
                 'Cada placa confirmada suma +1 punto.'
             ],
-            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
+            video: 'videos/videoplayback.mp4',
             color: 'bg-yellow-500/10'
         },
         {
@@ -64,7 +64,7 @@
                 'Desactivar: 10s sin interrupciones.',
                 'Rondas sin respawn; alternar roles en rondas múltiples.'
             ],
-            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
+            video: 'videos/videoplayback.mp4',
             color: 'bg-sky-500/10'
         }
     ];
