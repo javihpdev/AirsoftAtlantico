@@ -28,7 +28,7 @@
             color: 'bg-emerald-500/10'
         },
         {
-            id: 'team-deathmatch',
+            id: "duelo-por-equipos",
             title: 'Combate a Muerte por Equipos',
             short: 'Dos equipos se enfrentan por eliminaciones y control del mapa.',
             objectives: [
@@ -43,7 +43,7 @@
             color: 'bg-rose-500/10'
         },
         {
-            id: 'baja-confirmada',
+            id: "baja-confirmada",
             title: 'Baja Confirmada',
             short: 'Recoger placas/identificadores para confirmar bajas y sumar puntos.',
             objectives: [
@@ -58,7 +58,7 @@
             color: 'bg-yellow-500/10'
         },
         {
-            id: 'busqueda-destruccion',
+            id: 'colocar-y-desactivar',
             title: 'Colocar y Desactivar la Bomba',
             short: 'Atacantes plantan, defensores desactivan. Rondas sin respawn.',
             objectives: [
@@ -90,14 +90,14 @@
 
     <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
         {#each modes as mode}
-            <article class={`rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300`}>
+            <article id={mode.id} class={`scroll-mt-32 rounded-xl border border-gray-200 p-6 ${mode.color} shadow-sm hover:shadow-lg transition-shadow duration-300`}>
                 <div class="flex items-start gap-4">
                     <!-- Icono sencillo -->
                     <div class="flex-shrink-0">
                         <div class="w-12 h-12 rounded-md flex items-center justify-center bg-white/20">
                             {#if mode.id === 'captura-bandera'}
                                 <svg class="w-6 h-6 text-emerald-500" viewBox="0 0 24 24" fill="currentColor"><path d="M4 2v16h2V6h8l2 4 4-8H6z"/></svg>
-                            {:else if mode.id === 'team-deathmatch'}
+                            {:else if mode.id === 'duelo-por-equipos'}
                                 <svg class="w-6 h-6 text-rose-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.2 7 12 4.5 19.8 7 12 9.5z"/></svg>
                             {:else if mode.id === 'baja-confirmada'}
                                 <svg class="w-6 h-6 text-yellow-500" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a5 5 0 00-5 5v5H5l7 7 7-7h-2V7a5 5 0 00-5-5z"/></svg>

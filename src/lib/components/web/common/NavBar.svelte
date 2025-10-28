@@ -18,12 +18,10 @@
 
   // Lista de modos de juego
   const gameModes = [
-    { name: 'Team Deathmatch', href: '#team-deathmatch' },
+    { name: 'Duelo por Equipos', href: '#duelo-por-equipos' },
     { name: 'Captura la Bandera', href: '#captura-bandera' },
-    { name: 'Dominación', href: '#dominacion' },
-    { name: 'Búsqueda y Destrucción', href: '#busqueda-destruccion' },
-    { name: 'Free For All', href: '#free-for-all' },
-    { name: 'King of the Hill', href: '#king-hill' }
+    { name: 'Baja Confirmada', href: '#baja-confirmada' },
+    { name: 'Colocar y Desactivar la Bomba', href: '#colocar-y-desactivar' },
   ];
 
 
