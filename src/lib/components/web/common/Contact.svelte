@@ -42,6 +42,8 @@
 
 </script>
 
+<!-- NOTE: PARA MOVER LA CARPETA DEL SERVER A DONDE ESTABA mv ~/server-backup src/routes/server -->
+
 
 <div class="relative flex flex-col md:flex-row p-10 justify-center gap-5 w-full max-w-full bg-cover bg-center md:bg-[center_bottom_0px]" style="background-image: url('/images/galleryImages/_14A1029.avif'); loading: eager;">
     <!-- div de fondo oscuro para oscurecer la imagen, si lo hago con opacidad se queda TODO opaco -->
