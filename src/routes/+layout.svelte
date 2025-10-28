@@ -8,7 +8,7 @@
 <svelte:head>
     <meta name="description" content="Asociación de Airsoft del Atlántico">
     <title>Asociación de Airsoft del Atlántico</title>
-    <link rel="icon" type="image/png" href="/logo.jpg">
+    <link rel="icon" type="image/png" href="/logo.png">
 </svelte:head>
 
 	<NavBar/>
