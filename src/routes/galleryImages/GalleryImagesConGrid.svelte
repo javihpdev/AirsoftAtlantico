@@ -34,7 +34,7 @@
 ];
 
     let selectedImage = $state(null as string | null);
-    let visibleImages = $state(15); // Mostrar solo 12 inicialmente
+    let visibleImages = $state(10); // Mostrar solo 10 inicialmente
 
     function loadMore() {
         visibleImages += 15;

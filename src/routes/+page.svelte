@@ -2,7 +2,7 @@
     import Footer from "$lib/components/web/common/Footer.svelte";
     import Contact from "$lib/components/web/common/Contact.svelte";
     import Rules from "./rulesAirsoft/Rules.svelte";
-    import GalleryImages from "./galleryImages/GalleryImages.svelte";
+    import GalleryImages from "./galleryImages/GalleryImagesConGrid.svelte";
     import AboutUs from "./aboutUs/AboutUs.svelte";
     import GameModes from "./gamesmodes/GameModes.svelte";
 

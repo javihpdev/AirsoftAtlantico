@@ -65,7 +65,7 @@
                 centerMode={true}
             >
                 {#each images as img}
-                    <div class="flex items-center justify-center h-[18rem] sm:h-[24rem] md:h-[36rem] rounded-lg bg-black">
+                    <div class="flex items-center justify-center h-[9rem] sm:h-[24rem] md:h-[36rem] rounded-lg bg-black">
                         <!-- svelte-ignore a11y_click_events_have_key_events -->
                         <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
                         <img src={img} alt="Imagen galería"
