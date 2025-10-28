@@ -19,7 +19,7 @@
 
 {#if isOpen}
 <div  class="flex flex-col max-w-4xl mx-auto p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
-    <img src="images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
+    <img src="src/lib/components/web/images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
     <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
 
     <!-- Sección Seguridad -->
