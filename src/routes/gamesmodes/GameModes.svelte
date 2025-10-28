@@ -17,7 +17,7 @@
                 'Un compañero puede recuperar la bandera caída.',
                 'No ocultar ni enterrar la bandera.'
             ],
-            video: 'videos/videoplayback.mp4',
+            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
             color: 'bg-emerald-500/10'
         },
         {
@@ -32,7 +32,7 @@
                 'Cada eliminación suma puntos al equipo contrario.',
                 'Respawns según normas (limitados o ilimitados).'
             ],
-            video: 'videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4',
+            video: '/AirsoftAtlantico/videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4',
             color: 'bg-rose-500/10'
         },
         {

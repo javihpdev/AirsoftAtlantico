@@ -1,12 +1,12 @@
 <script lang="ts">
     function downloadFile(){
-		const link = document.createElement('a');
-		link.href = '/files/Asociación de  Airsoft del Atlántico.pdf';
-		link.download = 'Asociación de  Airsoft del Atlántico.pdf';
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-	}
+    const link = document.createElement('a');
+    link.href = '/AirsoftAtlantico/files/Asociación de  Airsoft del Atlántico.pdf';
+    link.download = 'Asociación de  Airsoft del Atlántico.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
 
     let isOpen = $state(false);
@@ -19,7 +19,7 @@
 
 {#if isOpen}
 <div  class="flex flex-col max-w-4xl mx-auto p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
-    <img src="src/lib/components/web/images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
+    <img src="/AirsoftAtlantico/images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
     <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
 
     <!-- Sección Seguridad -->
@@ -85,7 +85,7 @@
             </li>
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-gray-800">Réplicas cuerpo a cuerpo (cuchillos) no se pueden lanzar, solo tocando y no pueden ser reales.</span>
+                <span class="text-gray
             </li>
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
