@@ -47,7 +47,7 @@
                 'La baja solo cuenta si la placa es recogida.',
                 'Cada placa confirmada suma +1 punto.'
             ],
-            video: 'videos/videoplayback.mp4',
+            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
             color: 'bg-yellow-500/10'
         },
         {
@@ -64,7 +64,7 @@
                 'Desactivar: 10s sin interrupciones.',
                 'Rondas sin respawn; alternar roles en rondas múltiples.'
             ],
-            video: 'videos/videoplayback.mp4',
+            video: '/AirsoftAtlantico/videos/videoplayback.mp4',
             color: 'bg-sky-500/10'
         }
     ];

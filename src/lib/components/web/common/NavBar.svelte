@@ -37,7 +37,7 @@
   </div>
   <div class="hidden lg:flex justify-center items-center">
     <div class="flex  gap-20 justify-center items-center text-lg">
-      <Link href="/">INICIO</Link>
+      <Link href="/AirsoftAtlantico/">INICIO</Link>
        <!-- Desplegable para desktop -->
       <div class="relative z-50">
         <button class="tracking-[2px] hover:text-gray-300 transition-colors duration-700 cursor-pointer" onclick={toggleGameModes}>

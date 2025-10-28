@@ -1,12 +1,12 @@
 <script lang="ts">
-    function downloadFile(){
-		const link = document.createElement('a');
-		link.href = '/files/Asociación de  Airsoft del Atlántico.pdf';
-		link.download = 'Asociación de  Airsoft del Atlántico.pdf';
-		document.body.appendChild(link);
-		link.click();
-		document.body.removeChild(link);
-	}
+ function downloadFile(){
+    const link = document.createElement('a');
+    link.href = '/AirsoftAtlantico/files/Asociación de  Airsoft del Atlántico.pdf';
+    link.download = 'Asociación de  Airsoft del Atlántico.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+}
 
 
     let isOpen = $state(false);
