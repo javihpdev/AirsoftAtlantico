@@ -23,7 +23,7 @@
 		{
 			id: 'duelo-por-equipos',
 			title: 'Combate a Muerte por Equipos',
-			short: 'Dos equipos se enfrentan por eliminaciones y control del mapa.',
+			short: 'Dos equipos se enfrentan por eliminaciones y control del mapa. (Mata, Mata)',
 			objectives: [
 				'Eliminar al mayor número de jugadores enemigos.',
 				'Mantenerse con vida y coordinar tácticas de equipo.'
@@ -93,7 +93,7 @@
 		{#each modes as mode}
 			<article
 				id={mode.id}
-				class={`rounded-xl border border-gray-200 p-6 ${mode.color} w-full max-w-[600px] min-w-[320px] flex-grow-0 shadow-sm transition-shadow duration-300 hover:shadow-lg sm:w-[48%] lg:w-[48%]`}
+				class={`scroll-mt-32 rounded-xl border border-gray-200 p-6 ${mode.color} w-full max-w-[600px] min-w-[320px] flex-grow-0 shadow-sm transition-shadow duration-300 hover:shadow-lg sm:w-[48%] lg:w-[48%]`}
 			>
 				<div class="flex items-start gap-4">
 					<!-- Icono sencillo -->
