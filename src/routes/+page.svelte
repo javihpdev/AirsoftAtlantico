@@ -74,7 +74,10 @@
 
     <!-- seccion de reglas -->
     <section id="rules" class="flex w-full justify-center items-center scroll-mt-32">
-        <Rules/>
+        <div class="bg-gradient-to-r from-gray-50 via-cyan-400 to-yellow-300 border-4 border-black shadow-2xl rounded-2xl p-10 my-8 text-lg font-bold text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
+            <!-- Aquí va el componente Rules -->
+            <Rules/>
+        </div>
     </section>
     <!-- NOTE: separador provisional mirar si queda bien cuando esten los modos de juego-->
      <span class="flex w-300 max-w-[90%] h-0.5 bg-gray-700"></span>
