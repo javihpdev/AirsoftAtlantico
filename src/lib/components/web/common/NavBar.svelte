@@ -73,7 +73,7 @@
       <div class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}>
       <div class="flex flex-col lg:hidden items-center gap-5 p-4 text-lg ">
               <button onclick={closeMenu}>
-              <Link href="/AirsoftAtlantico/">INICIO</Link>
+              <Link href="https://javihpdev.github.io/AirsoftAtlantico/">INICIO</Link>
             </button>
             <button onclick={closeMenu}>
               <Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
