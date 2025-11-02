@@ -1,7 +1,8 @@
 <script lang="ts">
+
  function downloadFile(){
     const link = document.createElement('a');
-    link.href = '/AirsoftAtlantico/files/Asociación de  Airsoft del Atlántico.pdf';
+    link.href = 'files/Asociación de  Airsoft del Atlántico.pdf';
     link.download = 'Asociación de  Airsoft del Atlántico.pdf';
     document.body.appendChild(link);
     link.click();
@@ -203,6 +204,8 @@
         <a href="#contact" class="text-blue-600 ">CONTACTO</a>🫡
     </div>
     <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
+    <button onclick={downloadFile} class="bg-green-500 text-white rounded-lg p-2"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">DESCARGAR REGLAS</a></button>
+    
 
 </div>
 {:else}
