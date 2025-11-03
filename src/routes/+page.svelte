@@ -91,7 +91,7 @@
         <AboutUs/>
     </section>
 
-    <section id="contact" class="w-full translate-y-0.5 scroll-mt-32 max-w-full">
+    <section id="contact" class="w-full scroll-mt-32 max-w-full">
         <Contact/>
     </section>
     

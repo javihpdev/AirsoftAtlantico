@@ -46,9 +46,9 @@
 
 <!-- bg-center md:bg-[center_bottom_0px]" style="background-image: url('images/galleryImages/_14A1029.avif');" -->
 <div class="relative flex flex-col md:flex-row p-10 justify-center gap-5 w-full max-w-full overflow-hidden">
-    <img src="images/galleryImages/_14A1029.avif" alt="foto Contacto" class="absolute w-full bottom-0"/>
+    <img src="images/galleryImages/_14A1029.avif" alt="foto Contacto" class="absolute w-full min-w-full min-h-full object-cover bottom-0 left-0"/>
     <!-- div de fondo oscuro para oscurecer la imagen, si lo hago con opacidad se queda TODO opaco -->
-    <div class="absolute inset-0 bg-black/20"></div>
+    <div class="absolute w-full inset-0 bg-black/20"></div>
     <div class="flex flex-col relative text-white gap-5 md:gap-10 w-200 max-w-full">
         <h2 class="text-2xl">CONTÁCTANOS</h2>
         <p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>

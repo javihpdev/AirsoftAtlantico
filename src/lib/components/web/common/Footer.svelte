@@ -1,5 +1,5 @@
 <footer class="flex flex-col justify-center items-center text-center gap-2 p-6 bg-gray-900 text-white">
-    <p class="mt-2 text-xs text-gray-400">Web desarrollada por <a href="https://github.com/javierhpdev" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">javierhpdev</a></p>
+    <p class="mt-2 text-xs text-gray-400">Web desarrollada por <a href="https://github.com/javihpdev" target="_blank" rel="noopener noreferrer" class="underline hover:text-white">javierhpdev</a></p>
     <p>Copyright © 2025 Asociación de Airsoft del Atlántico. Todos los derechos reservados.</p>
     <p>Nuestras Redes Sociales:</p>
     <div class="flex gap-4">
