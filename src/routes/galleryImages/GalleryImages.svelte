@@ -37,7 +37,7 @@
     let visibleImages = $state(10); // Mostrar solo 10 inicialmente
 
     function loadMore() {
-        visibleImages += 15;
+        visibleImages += 10;
     }
 
     function openImage(image: string) {
