@@ -3,7 +3,7 @@
 >
 	<p class="mt-2 text-xs text-gray-400">
 		Web desarrollada por <a
-			href="https://github.com/javihpdev"
+			href="https://www.javierhpdev.com/"
 			target="_blank"
 			rel="noopener noreferrer"
 			class="underline hover:text-white">javihpdev</a
