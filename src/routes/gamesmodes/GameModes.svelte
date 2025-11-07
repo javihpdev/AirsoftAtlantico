@@ -162,8 +162,10 @@
 									</div>
 								</div>
 								<div class="mt-3">
-									<div class="overflow-hidden rounded-md border border-gray-200">
-										<video
+									<div class="flex overflow-hidden rounded-md border-2 p-6 border-gray-600 gap-10">
+										<p class="font-bold text-">PRÓXIMAMENTE...</p>
+										<p class="text-sm text-gray-500">Estamos preparando varios videos para cada modo de juego.</p>
+										<!-- <video
 											src={mode.video}
 											controls
 											controlsList="nodownload"
@@ -171,7 +173,7 @@
 											onloadedmetadata={handleVideoLoad}
 										>
 											<track kind="captions" srclang="es" label="Español" />
-										</video>
+										</video> -->
 									</div>
 								</div>
 							</div>
