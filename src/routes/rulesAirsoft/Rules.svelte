@@ -19,7 +19,7 @@
 
 
 {#if isOpen}
-<div  class="flex flex-col max-w-5xl p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
+<div  class="flex flex-col w-full p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
     <img src="images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
     <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
 
@@ -62,7 +62,7 @@
         <ul class="space-y-3">
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span class="text-gray-800">Está prohibido el uso de réplicas reales o que se asemejen a armas reales (ejemplo: Glock 17 real, M4 real, etc).</span>
+                <span class="text-gray-800">Prohibido el uso de armas de fogueo.</span>
             </li>
             <li class="flex items-start p-4 rounded-md bg-blue-50 border-l-4 border-blue-400 rounded-r-lg hover:bg-blue-100 transition-colors duration-200">
                 <span class="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
@@ -209,7 +209,7 @@
 
 </div>
 {:else}
-<div class="flex flex-col">
+<div class="flex flex-col p-10">
     <div class="mt-4 p-4 bg-gray-100 rounded-lg">   <p class="text-gray-800">Las reglas están ocultas.</p></div>
     <button class="mt-2 cursor-pointer rounded-lg p-3 bg-[#00ACC9] text-white" onclick={toggleSection}>Mostrar Reglas</button>
 </div>

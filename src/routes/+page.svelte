@@ -73,9 +73,8 @@
     </section>
 
     <!-- seccion de reglas -->
-    <section id="rules" class="flex w-full justify-center items-center scroll-mt-32">
-        <div class="bg-gradient-to-r from-gray-50 via-cyan-400 max-w-[90%] to-yellow-300 border-4 border-black shadow-2xl rounded-2xl p-10 my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
-            <!-- Aquí va el componente Rules -->
+    <section id="rules" class="flex w-full max-w-full justify-center items-center scroll-mt-32">
+    <div class="bg-gradient-to-r from-gray-50 via-cyan-400 to-yellow-300 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
             <Rules/>
         </div>
     </section>
