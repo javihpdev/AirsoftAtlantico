@@ -12,4 +12,4 @@
 </script>
 
 
-<input type={type} value={value} placeholder={placeholder} class="text-xl p-3 text-white bg-gray-800 caret-white outline-none {addClass}" />
+<input type={type} bind:value={value} placeholder={placeholder} class="text-xl p-3 text-white bg-gray-800 caret-white outline-none {addClass}" />
