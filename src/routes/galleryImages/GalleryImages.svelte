@@ -62,7 +62,7 @@
 					src={photo}
 					alt="Airsoft Atlántico {index + 1}"
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-					loading="eager"
+					loading="lazy"
 					/>
 			</button>
 		{/each}
@@ -99,6 +99,7 @@
 			src={selectedImage}
 			alt="Imagen ampliada"
 			class="max-h-full max-w-full"
+			loading="lazy"
 		/>
 	</div>
 {/if}
