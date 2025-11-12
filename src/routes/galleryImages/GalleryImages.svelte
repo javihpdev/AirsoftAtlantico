@@ -72,7 +72,7 @@
 		<div class="mt-8 flex justify-center">
 			<button
 				onclick={loadMore}
-				class="rounded-lg bg-[#00ACC9] px-6 py-3 text-white transition-colors duration-600 hover:bg-gray-800"
+				class="rounded-lg bg-[#00ACC9] hover:bg-gray-800 hover:scale-105 px-6 py-3 text-white transition-all duration-600 cursor-pointer"
 			>
 				Cargar más imágenes ({images.length - visibleImages} restantes)
 			</button>

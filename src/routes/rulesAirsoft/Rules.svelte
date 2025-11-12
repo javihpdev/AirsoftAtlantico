@@ -87,8 +87,8 @@
         </p>
         <a href="#contact" class="text-blue-600 ">CONTACTO</a>🫡
     </div>
-    <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
-    <button onclick={downloadFile} class="bg-green-500 text-white rounded-lg p-2"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">DESCARGAR REGLAS</a></button>
+    <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-red-700 transition-all duration-600"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
+    <button onclick={downloadFile} class="bg-green-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-green-700 transition-all duration-600"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">DESCARGAR REGLAS</a></button>
     
 
 </div>
@@ -96,7 +96,7 @@
 
 <div class="flex flex-col p-10">
     <div class="mt-4 p-4 bg-gray-100 rounded-lg">   <p class="text-gray-800">Las reglas están ocultas.</p></div>
-    <button class="mt-2 cursor-pointer rounded-lg p-3 bg-[#00ACC9] text-white" onclick={toggleSection}>Mostrar Reglas</button>
+    <button class="mt-2 cursor-pointer rounded-lg p-3 bg-[#00ACC9] hover:scale-105 hover:bg-gray-800 transition-all duration-600 duratio-600 text-white" onclick={toggleSection}>Mostrar Reglas</button>
 </div>
 
 {/if}
