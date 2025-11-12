@@ -108,7 +108,7 @@
 			cols="50"
 			class="rounded-b-lg bg-gray-800 p-2 text-xl text-white caret-white outline-none"
 		></textarea>
-		<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-30 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
+		<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-50 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
     {isLoading ? "Enviando Mensaje..." : "Enviar"}
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
         <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
