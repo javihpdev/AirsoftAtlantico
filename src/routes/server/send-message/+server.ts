@@ -2,14 +2,47 @@ import { json } from '@sveltejs/kit';
 import type { RequestHandler } from '@sveltejs/kit';
 import {createTransport} from 'nodemailer';
 import { EMAIL_HOST, EMAIL_FROM, EMAIL_PASS, EMAIL_PORT } from '$env/static/private';
+import { promisify } from 'util';
+import dns from 'dns';
+
+
+const resolveMx = promisify(dns.resolveMx);
+
+async function verificarDominioEmail(email: string): Promise<boolean> {
+    try {
+        const domain = email.split('@')[1];
+        const addresses = await resolveMx(domain);
+        return addresses && addresses.length > 0;
+    } catch (error) {
+        return false;
+    }
+}
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
-		const { name, email, asunto, message } = await request.json();
+		const { nombre, email, asunto, mensaje } = await request.json();
 
-        if (!name || !email || !asunto || !message) {
+        if (!nombre || !email || !asunto || !mensaje) {
         return new Response(JSON.stringify({ error: "Faltan campos obligatorios" }), { status: 400 });
         }
+
+         // Verificar formato del email
+       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+       if (!emailRegex.test(email)) {
+           return json({ 
+               success: false, 
+               error: "El formato del correo electrónico no es válido" 
+           }, { status: 400 });
+       }
+
+       // Verificar que el dominio del email exista
+       const dominioValido = await verificarDominioEmail(email);
+       if (!dominioValido) {
+           return json({ 
+               success: false, 
+               error: "El dominio del correo electrónico no existe" 
+           }, { status: 400 });
+       }
 
 
 		// Configurar el transporte de nodemailer
@@ -31,11 +64,11 @@ export const POST: RequestHandler = async ({ request }) => {
 			subject: `Nuevo mensaje de contacto: ${asunto}`,
 			html: `
                 <h2>Nuevo mensaje de contacto</h2>
-                <p><strong>Nombre:</strong> ${name}</p>
+                <p><strong>Nombre:</strong> ${nombre}</p>
                 <p><strong>Email:</strong> ${email}</p>
                 <p><strong>Asunto:</strong> ${asunto}</p>
                 <p><strong>Mensaje:</strong></p>
-                <p>${message}</p>
+                <p>${mensaje}</p>
             `
 		};
 
@@ -52,7 +85,7 @@ export const POST: RequestHandler = async ({ request }) => {
             ¡Mensaje recibido!
         </h2>
         <p style="font-size:1rem;color:#fff;text-align:center;margin-bottom:16px;line-height:1.6;">
-            Hola <strong style="color:#fff;">${name}</strong>,<br>
+            Hola <strong style="color:#fff;">${nombre}</strong>,<br>
             Gracias por ponerte en contacto con nosotros.<br>
             Hemos recibido tu mensaje y te responderemos con la mayor brevedad posible.<br>
             Puedes seguir explorando la web o nuestro Instagram o responder a este correo si tienes alguna duda adicional.

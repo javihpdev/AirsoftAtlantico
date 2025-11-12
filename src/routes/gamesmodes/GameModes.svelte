@@ -75,12 +75,6 @@
 		openMode = openMode === id ? '' : id;
 	}
 
-	function handleVideoLoad(event: Event) {
-		const video = event.target as HTMLVideoElement;
-		if (video) {
-			video.volume = 0.08;
-		}
-	}
 </script>
 
 <div class="mx-auto w-full max-w-7xl px-6 py-10">
@@ -165,15 +159,6 @@
 									<div class="flex overflow-hidden rounded-md border-2 p-6 border-gray-600 gap-10">
 										<p class="font-bold text-">PRÓXIMAMENTE...</p>
 										<p class="text-sm text-gray-500">Estamos preparando varios videos para cada modo de juego.</p>
-										<!-- <video
-											src={mode.video}
-											controls
-											controlsList="nodownload"
-											class="h-48 w-full bg-black object-cover"
-											onloadedmetadata={handleVideoLoad}
-										>
-											<track kind="captions" srclang="es" label="Español" />
-										</video> -->
 									</div>
 								</div>
 							</div>
@@ -186,10 +171,11 @@
 
 	<div class="mt-10 text-center">
 		<p class="text-sm text-gray-500">
-			Si quieres que añadamos más modos o reglas específicas, dínoslo en el apartado de <a
+			Si quieres que añadamos más modos o reglas específicas, dínoslo en el apartado de 
+			<a
 				href="#contact"
-				class="underline">CONTACTO</a
-			> y lo documentamos aquí.
+				class="underline">CONTACTO
+			</a> y lo documentamos aquí.
 		</p>
 	</div>
 </div>

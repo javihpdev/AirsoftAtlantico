@@ -1,6 +1,6 @@
 <script lang="ts">
     import Footer from "$lib/components/web/common/Footer.svelte";
-    import Contact from "$lib/components/web/common/Contact.svelte";
+    import Contact from "./contact/Contact.svelte";
     import Rules from "./rulesAirsoft/Rules.svelte";
     import GalleryImages from "./galleryImages/GalleryImages.svelte";
     import AboutUs from "./aboutUs/AboutUs.svelte";
