@@ -155,8 +155,9 @@
 										</ul>
 									</div>
 								</div>
-								<div class="mt-3">
-									<div class="flex overflow-hidden rounded-md border-2 p-6 border-gray-600 gap-10">
+								<div class="mt-3 ">
+									
+									<div class="flex flex-col w-full md:flex-row  overflow-hidden rounded-md border-2 p-6 border-gray-600 gap-4 max-w-full md:gap-10">
 										<p class="font-bold text-">PRÓXIMAMENTE...</p>
 										<p class="text-sm text-gray-500">Estamos preparando varios videos para cada modo de juego.</p>
 									</div>
