@@ -1,10 +1,12 @@
 <script lang="ts">
-    import Footer from "$lib/components/web/common/Footer.svelte";
-    import Contact from "./contact/Contact.svelte";
-    import Rules from "./rulesAirsoft/Rules.svelte";
-    import GalleryImages from "./galleryImages/GalleryImages.svelte";
-    import AboutUs from "./aboutUs/AboutUs.svelte";
-    import GameModes from "./gamesmodes/GameModes.svelte";
+	import AboutUs from "$lib/components/page/aboutUs/AboutUs.svelte";
+	import Contact from "$lib/components/page/contact/Contact.svelte";
+	import GalleryImages from "$lib/components/page/galleryImages/GalleryImages.svelte";
+	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
+	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
+	import Footer from "$lib/components/web/common/Footer.svelte";
+
+ 
 
     let videoElement: HTMLVideoElement;
     let scrollY = $state(0);
