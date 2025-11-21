@@ -99,7 +99,6 @@
 			src={selectedImage}
 			alt="Imagen ampliada"
 			class="max-h-full max-w-full"
-			loading="lazy"
 		/>
 	</div>
 {/if}
