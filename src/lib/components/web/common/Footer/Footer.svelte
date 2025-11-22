@@ -32,14 +32,14 @@
 	<div class="flex gap-4">
 		<a href="https://www.instagram.com/asoairatlan/" target="_blank" rel="noopener noreferrer">
 			<img
-				src="images/logoInstragram.png"
+				src="/images/logoInstragram.png"
 				class="w-10 object-contain transition-all duration-700 hover:scale-110"
 				alt="logo instagram"
 			/>
 		</a>
 		<a href="https://wa.me/34674957386" target="_blank" rel="noopener noreferrer">
 			<img
-				src="images/logoWhatsapp.png"
+				src="/images/logoWhatsapp.png"
 				class="w-10 object-contain transition-all duration-700 hover:scale-110"
 				alt="logo whatsapp"
 			/>

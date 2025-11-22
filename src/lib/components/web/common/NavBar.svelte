@@ -29,7 +29,7 @@
 	class="z-100 flex w-full max-w-full flex-col items-center justify-center gap-2 bg-gray-800 p-3 text-white lg:flex-row lg:gap-10 lg:p-2"
 >
 	<div class="flex items-center justify-center overflow-hidden rounded-full">
-		<img class="object-fill" src="images/logo.png" alt="logo" width="85" height="85" />
+		<img class="object-fill" src="/images/logo.png" alt="logo" width="85" height="85" />
 	</div>
 	<div class="hidden items-center justify-center lg:flex">
 		<div class="flex items-center justify-center gap-20 text-lg">
