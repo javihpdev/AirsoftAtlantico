@@ -89,7 +89,7 @@
 		>
 			<div class="flex flex-col items-center gap-5 p-4 text-lg lg:hidden">
 				<button onclick={closeMenu}>
-					<Link href="https://www.airsoftatlantico.com/">INICIO</Link>
+					<Link href="/">INICIO</Link>
 				</button>
 				<button onclick={closeMenu}>
 					<Link href="/#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
