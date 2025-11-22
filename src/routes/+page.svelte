@@ -4,7 +4,6 @@
 	import GalleryImages from "$lib/components/page/galleryImages/GalleryImages.svelte";
 	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
-	import Footer from "$lib/components/web/common/Footer.svelte";
 
  
 
@@ -95,10 +94,6 @@
     <section id="contact" class="w-full scroll-mt-32 max-w-full">
         <Contact/>
     </section>
-    
-    <div id="footer" class="w-full z-10">
-        <Footer/>
-    </div>
 </section>
 
 <!-- Botón de volver arriba -->

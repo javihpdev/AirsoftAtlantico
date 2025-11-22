@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Footer from '$lib/components/web/common/Footer/Footer.svelte';
 	import NavBar from '$lib/components/web/common/NavBar.svelte';
 	import '../app.css';
 
@@ -15,3 +16,5 @@
 
 
 {@render children()}
+
+    <Footer/>

@@ -1,6 +1,31 @@
 <footer
-	class="flex flex-col items-center justify-center gap-2 bg-gray-900 p-6 text-center text-white"
+	class="flex flex-col md:flex-row gap-2 bg-gray-900 p-6 justify-center gap-10 items-center text-center text-white"
 >
+<div class="flex flex-col gap-2 text-lg ">
+<p class="text-4xl">SOPORTE</p>
+
+	<a
+		href="/PrivacyPolicy"
+		class="text-gray-400 hover:text-white text-xl underline"
+		>Política de privacidad</a
+	>
+
+	<a href="/TermsOfUse">
+		<p class="mx-2 text-gray-400 hover:text-white underline"
+			>Aviso legal</p
+		>
+	</a>
+
+	<a href="/CookiePolicy">	
+		<p class="text-gray-400 hover:text-white underline"
+			>Política de cookies</p
+		>
+	</a>
+</div>
+
+<span class="bg-gray-200 md:w-0.5 md:h-50 w-full h-0.5 self-stretch"></span>
+
+<div class="flex flex-col items-center justify-center gap-2">
 	
 	<p>Copyright © 2025 Asociación de Airsoft del Atlántico. Todos los derechos reservados.</p>
 	<p>Nuestras Redes Sociales:</p>
@@ -28,4 +53,9 @@
 			class="underline mt-2 text-xs text-gray-400 hover:text-white">javihpdev</a
 		>
 	</p>
+</div>
+
+
+
+
 </footer>

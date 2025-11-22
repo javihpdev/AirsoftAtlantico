@@ -10,8 +10,10 @@
 	let mensaje = $state('');
 	let mensajeExito = $state(false);
 	let mensajeError = $state(false);
-
+	let acceptPrivacy = $state(false);
+	let showPrivacyError = $state(false);
 	let isLoading = $state(false);
+	let fieldNotCompleted = $state(false);
 
 	function validarEmail(email: string): boolean {
 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -23,11 +25,18 @@
 		// Este event evita que se recargue la pagina al enviar el formulario y que salga la URL con los parametros en la barra de direcciones del navegador
 		e.preventDefault();
 
+		 if (!acceptPrivacy) {
+           showPrivacyError = true;
+            return;
+        }
+        showPrivacyError = false;
+
 		// Validar campos requeridos
 		if (!nombre || !email || !mensaje || !asunto) {
-			alert('Por favor completa todos los campos obligatorios');
+			fieldNotCompleted = true;
 			return;
 		}
+		fieldNotCompleted = false;
 
 		if (!validarEmail(email)) {
 			alert('Por favor ingresa un correo electrónico válido');
@@ -61,6 +70,7 @@
 				email = '';
 				asunto = '';
 				mensaje = '';
+				acceptPrivacy = false;
 			} else {
 				mensajeError = true;
 				console.error('Error al enviar el mensaje:', result.error);
@@ -108,6 +118,18 @@
 			cols="50"
 			class="rounded-b-lg bg-gray-800 p-2 text-xl text-white caret-white outline-none"
 		></textarea>
+		<label class="flex items-center gap-3 text-white text-lg">
+        <input type="checkbox" bind:checked={acceptPrivacy} class="mt-1" />
+        <span>
+            He leído y acepto la <a href="PrivacyPolicy" target="_blank" class="underline hover:text-gray-200">Política de Privacidad</a>
+        </span>
+    </label>
+	{#if fieldNotCompleted}
+		<p class="bg-gray-900 p-5 text-red-500 text-sm">Por favor, completa todos los campos obligatorios.</p>
+	{/if}
+	{#if showPrivacyError}
+		<p class="bg-gray-900 p-5 text-red-500 text-sm">Debes aceptar la Política de Privacidad para continuar.</p>
+	{/if}
 		<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-50 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
     {isLoading ? "Enviando Mensaje..." : "Enviar"}
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">

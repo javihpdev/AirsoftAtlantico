@@ -18,10 +18,10 @@
 
 	// Lista de modos de juego
 	const gameModes = [
-		{ name: 'Duelo por Equipos', href: '#duelo-por-equipos' },
-		{ name: 'Captura la Bandera', href: '#captura-bandera' },
-		{ name: 'Baja Confirmada', href: '#baja-confirmada' },
-		{ name: 'Colocar y Desactivar la Bomba', href: '#colocar-y-desactivar' }
+		{ name: 'Duelo por Equipos', href: '/#duelo-por-equipos' },
+		{ name: 'Captura la Bandera', href: '/#captura-bandera' },
+		{ name: 'Baja Confirmada', href: '/#baja-confirmada' },
+		{ name: 'Colocar y Desactivar la Bomba', href: '/#colocar-y-desactivar' }
 	];
 </script>
 
@@ -33,7 +33,7 @@
 	</div>
 	<div class="hidden items-center justify-center lg:flex">
 		<div class="flex items-center justify-center gap-20 text-lg">
-			<Link href="https://www.airsoftatlantico.com/">INICIO</Link>
+			<Link href="/">INICIO</Link>
 			<!-- Desplegable para desktop -->
 			<div class="relative z-50">
 				<button
@@ -55,10 +55,10 @@
 					{/each}
 				</div>
 			</div>
-			<Link href="#rules">REGLAS</Link>
-			<Link href="#galleryImages">IMÁGENES</Link>
-			<Link href="#aboutUs">NOSOTROS</Link>
-			<Link href="#contact">CONTACTO</Link>
+			<Link href="/#rules">REGLAS</Link>
+			<Link href="/#galleryImages">IMÁGENES</Link>
+			<Link href="/#aboutUs">NOSOTROS</Link>
+			<Link href="/#contact">CONTACTO</Link>
 		</div>
 	</div>
 
@@ -92,19 +92,19 @@
 					<Link href="https://www.airsoftatlantico.com/">INICIO</Link>
 				</button>
 				<button onclick={closeMenu}>
-					<Link href="#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
+					<Link href="/#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
 				</button>
 				<button onclick={closeMenu}>
-					<Link href="#rules">REGLAS</Link>
+					<Link href="/#rules">REGLAS</Link>
 				</button>
 				<button onclick={closeMenu}>
-					<Link href="#galleryImages">IMÁGENES</Link>
+					<Link href="/#galleryImages">IMÁGENES</Link>
 				</button>
 				<button onclick={closeMenu}>
-					<Link href="#aboutUs">NOSOTROS</Link>
+					<Link href="/#aboutUs">NOSOTROS</Link>
 				</button>
 				<button onclick={closeMenu}>
-					<Link href="#contact">CONTACTO</Link>
+					<Link href="/#contact">CONTACTO</Link>
 				</button>
 			</div>
 		</div>
