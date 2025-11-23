@@ -22,7 +22,6 @@
     }
 </script>
 
-
 {#if isOpen}
 <div  class="flex flex-col w-full lg:max-w-5xl p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
     <img src="images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
@@ -87,12 +86,12 @@
         </p>
         <a href="#contact" class="text-blue-600 ">CONTACTO</a>🫡
     </div>
-    <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-red-700 transition-all duration-600"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
-    <button onclick={downloadFile} class="bg-green-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-green-700 transition-all duration-600">DESCARGAR REGLAS</button>
+    <button onclick={toggleSection} class="bg-red-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-red-700 cursor-pointer transition-all duration-600"><a href="#rules" class="flex w-full justify-center" aria-label="ocultar reglas">OCULTAR REGLAS</a></button>
+    <button onclick={downloadFile} class="bg-green-500 text-white rounded-lg p-2 hover:scale-105 hover:bg-green-700 cursor-pointer transition-all duration-600">DESCARGAR REGLAS</button>
     
 
 </div>
-{:else}
+{:else} 
 
 <div class="flex flex-col p-10">
     <div class="mt-4 p-4 bg-gray-100 rounded-lg">   <p class="text-gray-800">Las reglas están ocultas.</p></div>

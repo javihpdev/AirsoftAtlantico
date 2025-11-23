@@ -80,7 +80,7 @@
 <div class="mx-auto w-full max-w-7xl px-6 py-10">
 	<header class="mb-8 text-center">
 		<h2 class="text-4xl font-bold">MODOS DE JUEGO</h2>
-		<p class="mt-2 text-gray-600">Reglas, objetivos y formato de las partidas en nuestro campo.</p>
+		<p class="mt-2 text-gray-600">Reglas de juego, objetivos y formato de las partidas en nuestro campo.</p>
 	</header>
 
 	<div class="flex w-full flex-wrap items-start gap-6">
