@@ -75,14 +75,14 @@
 
     <!-- seccion de reglas -->
     <section id="rules" class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32">
-    <h2 class="text-4xl font-bold">REGLAS</h2>
-		<p class="mt-2 text-gray-600">Reglas de Seguridad, Réplicas, Distancias y Notas de Interés</p>
+    <h2 class="text-4xl font-bold max-w-[85%] text-center">REGLAS</h2>
+		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Reglas de Seguridad, Réplicas, Distancias y Notas de Interés</p>
     <div class="bg-gradient-to-r from-gray-50 via-cyan-400 to-yellow-300 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
             <Rules/>
         </div>
     </section>
     <!-- NOTE: separador provisional mirar si queda bien cuando esten los modos de juego-->
-     <span class="flex w-300 max-w-[90%] h-0.5 bg-gray-700"></span>
+     <!-- <span class="flex w-300 max-w-[90%] h-0.5 bg-gray-700"></span> -->
     <!-- seccion de imagenes varias que van apareciendo -->
     <section id="galleryImages" class="scroll-mt-32">
         <GalleryImages/>

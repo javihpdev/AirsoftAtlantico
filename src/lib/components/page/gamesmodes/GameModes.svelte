@@ -22,8 +22,8 @@
 		},
 		{
 			id: 'duelo-por-equipos',
-			title: 'Combate a Muerte por Equipos',
-			short: 'Dos equipos se enfrentan por eliminaciones y control del mapa. (Mata, Mata)',
+			title: 'Duelo por Equipos',
+			short: 'Dos equipos se enfrentan por eliminaciones y control del mapa. Gana el equipo con más bajas.',
 			objectives: [
 				'Eliminar al mayor número de jugadores enemigos.',
 				'Mantenerse con vida y coordinar tácticas de equipo.'

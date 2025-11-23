@@ -6,24 +6,35 @@
 
         <a
             href="/PrivacyPolicy"
-            class="text-gray-400 hover:text-white text-lg underline"
+            class="text-gray-400 hover:text-white text-xl underline"
         >
             Política de privacidad
         </a>
 
         <a
             href="/TermsOfUse"
-            class="text-gray-400 hover:text-white text-lg underline"
+            class="text-gray-400 hover:text-white text-xl underline"
         >
             Aviso legal
         </a>
 
         <a
             href="/CookiePolicy"
-            class="text-gray-400 hover:text-white text-lg underline"
+            class="text-gray-400 hover:text-white text-xl underline"
         >
             Política de cookies
         </a>
+
+        <button
+            onclick={() => {
+                localStorage.removeItem('ga_consent_data');
+                localStorage.removeItem('ga_consent');
+                window.location.reload();
+            }}
+            class="text-gray-400 hover:text-white text-xl underline text-left"
+        >
+            ⚙️ Configurar cookies
+        </button>
     </div>
 
     <span class="bg-gray-200 md:w-0.5 md:h-50 w-full h-0.5 self-stretch"></span>

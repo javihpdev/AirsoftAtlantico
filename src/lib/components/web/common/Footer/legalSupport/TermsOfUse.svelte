@@ -9,8 +9,7 @@
         </p>
         <p class="text-base leading-relaxed mb-2"><strong>Denominación social:</strong> Asociación de Airsoft del Atlántico</p>
         <p class="text-base leading-relaxed mb-2"><strong>NIF:</strong> G22838916</p>
-        <p class="text-base leading-relaxed mb-2"><strong>Domicilio:</strong> Mirador del Mazapé, San Juan de la Rambla, Tenerife</p>
-        <p class="text-base leading-relaxed mb-2"><strong>Correo electrónico:</strong> <a href="mailto:asociacionairsoftatlantico@gmail.com" class="text-blue-600 underline hover:text-blue-800">asociacionairsoftatlantico@gmail.com</a></p>
+        <p class="text-base leading-relaxed mb-2"><strong>Domicilio:</strong> <em class="text-gray-600">No disponemos de un lugar específico si quieres contactarnos, utiliza el apartado de <a class="underline" href="/#contact">CONTACTO</a></em></p><p class="text-base leading-relaxed mb-2"><strong>Correo electrónico:</strong> <a href="mailto:asociacionairsoftatlantico@gmail.com" class="text-blue-600 underline hover:text-blue-800">asociacionairsoftatlantico@gmail.com</a></p>
         <p class="text-base leading-relaxed"><strong>WhatsApp:</strong> +34 674 95 73 86</p>
     </section>
 

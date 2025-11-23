@@ -36,11 +36,14 @@
                 <p class="text-gray-700 mb-4">
                     <strong>🏟️ Nombre del Campo:</strong> RAID
                 </p>
+                <p>
+                <strong>📍 Dirección:</strong>
                 <a href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046" target="_blank" rel="noopener noreferrer">
-                    <p class="text-gray-700 mb-4">
-                        <strong>📍 Dirección:</strong> Mirador El Mazape, San Juan de la Rambla
-                    </p>
+                    <span class="text-gray-700">
+                     Mirador El Mazape, San Juan de la Rambla
+                    </span>
                 </a>
+                </p>
             </div>
         </div>
 
