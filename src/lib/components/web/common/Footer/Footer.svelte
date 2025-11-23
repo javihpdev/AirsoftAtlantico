@@ -6,21 +6,21 @@
 
         <a
             href="/PrivacyPolicy"
-            class="text-gray-400 hover:text-white text-xl underline"
+            class="text-gray-400 hover:text-white text-lg underline"
         >
             Política de privacidad
         </a>
 
         <a
             href="/TermsOfUse"
-            class="text-gray-400 hover:text-white text-xl underline"
+            class="text-gray-400 hover:text-white text-lg underline"
         >
             Aviso legal
         </a>
 
         <a
             href="/CookiePolicy"
-            class="text-gray-400 hover:text-white text-xl underline"
+            class="text-gray-400 hover:text-white text-lg underline"
         >
             Política de cookies
         </a>
