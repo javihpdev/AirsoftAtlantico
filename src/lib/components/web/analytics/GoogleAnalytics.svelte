@@ -26,32 +26,37 @@
                 window.dataLayer.push(args);
             };
 
-            // Configuración inicial
             window.gtag('js', new Date());
             
-            // Configuración con opciones de cookies explícitas
+            // Configuración SIN cookie_flags (dejar que GA lo maneje automáticamente)
             window.gtag('config', PUBLIC_GOOGLE_ANALYTICS_ID, {
                 page_path: window.location.pathname,
-                cookie_domain: 'auto',  // ← Importante
-                cookie_flags: 'SameSite=None;Secure',  // ← Para HTTPS
-                cookie_expires: 63072000  // 2 años en segundos
+                send_page_view: true
             });
 
             console.log('✅ GA configurado');
 
-            // Verificar cookies después de 3 segundos
+            // Enviar evento de prueba
+            window.gtag('event', 'page_view', {
+                page_title: document.title,
+                page_location: window.location.href,
+                page_path: window.location.pathname
+            });
+
+            console.log('📊 Evento page_view enviado');
+
+            // Verificar cookies después de 5 segundos (GA4 puede tardar más)
             setTimeout(() => {
                 const cookies = document.cookie;
-                console.log('🍪 Cookies después de 3s:', cookies);
+                console.log('🍪 Cookies después de 5s:', cookies);
                 
                 if (!cookies || cookies.length === 0) {
-                    console.error('❌ Las cookies NO se crearon');
-                    console.log('Hostname:', window.location.hostname);
-                    console.log('Protocol:', window.location.protocol);
+                    console.warn('⚠️ Las cookies NO se crearon en el navegador');
+                    console.log('Pero GA4 puede estar funcionando igual (usa almacenamiento alternativo)');
                 } else {
-                    console.log('✅ Cookies creadas correctamente');
+                    console.log('✅ Cookies creadas:', cookies.split(';').length);
                 }
-            }, 3000);
+            }, 5000);
         };
 
         script.onerror = () => {
@@ -72,6 +77,7 @@
     // Trackear cambios de página
     $effect(() => {
         if (initialized && browser && window.gtag) {
+            console.log('📄 Page changed:', $page.url.pathname);
             window.gtag('config', PUBLIC_GOOGLE_ANALYTICS_ID, {
                 page_path: $page.url.pathname
             });
