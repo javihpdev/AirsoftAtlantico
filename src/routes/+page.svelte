@@ -2,21 +2,20 @@
 	import AboutUs from "$lib/components/page/aboutUs/AboutUs.svelte";
 	import Contact from "$lib/components/page/contact/Contact.svelte";
 	import GalleryImages from "$lib/components/page/galleryImages/GalleryImages.svelte";
+	import GalleryVideos from "$lib/components/page/galleryVideos/GalleryVideos.svelte";
 	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
 
  
 
-    let videoElement: HTMLVideoElement;
     let scrollY = $state(0);
 	let showScrollButton = $derived(() => scrollY > 2500);
     
-    // funcion para establecer el volumen del video al 30% por defecto
-    $effect(() => {
-        if (videoElement) {
-            videoElement.volume = 0.1;
-        }
-    });
+   // funcion para establecer el volumen del video al 10% por defecto
+	function setVolume(event: Event) {
+        const video = event.target as HTMLVideoElement;
+        video.volume = 0.1;
+    }
 
 	  // Función para volver arriba
     function scrollToTop() {
@@ -57,10 +56,10 @@
         <div class="relative z-20 w-full py-10 text-white flex flex-col gap-6 justify-center max-w-[70%] items-center">
             <p class="tracking-[5px]">VÍDEO DE PRESENTACIÓN</p>
             <video 
-                bind:this={videoElement} 
                 src="videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4" 
                 controls 
                 controlslist='nodownload' 
+                onloadedmetadata={setVolume}
                 class="rounded-lg shadow-lg"
             >
                 <track kind="captions" src="" label="Spanish" srclang="es" default />
@@ -86,6 +85,10 @@
     <!-- seccion de imagenes varias que van apareciendo -->
     <section id="galleryImages" class="scroll-mt-32">
         <GalleryImages/>
+    </section>
+
+    <section id="galleryVideos" class="scroll-mt-32">
+        <GalleryVideos/>
     </section>
 
     <!-- seccion de nosotros-->

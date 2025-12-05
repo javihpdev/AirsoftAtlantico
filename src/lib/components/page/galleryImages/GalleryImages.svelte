@@ -49,10 +49,10 @@
     }
 </script>
 
-<div class="w-full p-8">
-	<h2 class="mb-8 text-center text-3xl font-bold text-gray-900">GALERÍA DE IMÁGENES</h2>
-
-	<div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+<div class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32 p-8">
+	<h2 class="text-4xl font-bold max-w-[85%] text-center">GALERÍA DE IMÁGENES</h2>
+		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Imágenes de las partidas en RAID</p>
+	<div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
 		{#each images.slice(0, visibleImages) as photo, index}
 			<button
 				onclick={() => openImage(photo)}
