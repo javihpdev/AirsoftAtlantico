@@ -57,6 +57,7 @@
 			</div>
 			<Link href="/#rules">REGLAS</Link>
 			<Link href="/#galleryImages">IMÁGENES</Link>
+			<Link href="/#galleryVideos">VÍDEOS</Link>
 			<Link href="/#aboutUs">NOSOTROS</Link>
 			<Link href="/#contact">CONTACTO</Link>
 		</div>
@@ -85,7 +86,7 @@
 		</div>
 		<!-- Menu con los links al desplegar el menu hamburguesa -->
 		<div
-			class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'}`}
+			class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'}`}
 		>
 			<div class="flex flex-col items-center gap-5 p-4 text-lg lg:hidden">
 				<button onclick={closeMenu}>
@@ -99,6 +100,9 @@
 				</button>
 				<button onclick={closeMenu}>
 					<Link href="/#galleryImages">IMÁGENES</Link>
+				</button>
+				<button onclick={closeMenu}>
+					<Link href="/#galleryVideos">VÍDEOS</Link>
 				</button>
 				<button onclick={closeMenu}>
 					<Link href="/#aboutUs">NOSOTROS</Link>

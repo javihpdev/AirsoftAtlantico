@@ -72,7 +72,7 @@
         <div class="col-span-full mt-4 flex justify-center">
             <button
                 onclick={loadMore}
-                class="rounded bg-blue-600 px-4 py-2 text-white transition hover:bg-blue-700"
+                class="rounded-lg bg-[#00ACC9] hover:bg-gray-800 hover:scale-105 px-6 py-3 text-white transition-all duration-600 cursor-pointer"
             >
                 Cargar más vídeos
             </button>
