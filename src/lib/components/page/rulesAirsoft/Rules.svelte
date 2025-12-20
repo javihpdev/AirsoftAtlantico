@@ -3,6 +3,7 @@
     import ReplicasRules from "./ReplicasRules/ReplicasRules.svelte";
 	import DistancesRules from "./DistancesRules/DistancesRules.svelte";
 	import NotesInterestRules from "./NotesInterest/NotesInterestRules.svelte";    
+	import FpsJulios from "./FpsJulios.svelte";
 
 
  function downloadFile(){
@@ -21,6 +22,10 @@
        isOpen = !isOpen;
     }
 </script>
+
+<!-- Tabla de equivalencias fps -->
+ 
+<FpsJulios />
 
 {#if isOpen}
 <div  class="flex flex-col w-full lg:max-w-5xl p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
