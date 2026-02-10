@@ -18,3 +18,4 @@
 <NotesInterest text = "El material ajeno encontrado durante las partidas se entrega a la organización. No apropiarse indebidamente de material ajeno." />
 <NotesInterest text = "En caso de que alguna cobertura o atrezo se caiga o tenga desperfectos, comunicarlo a la organización, no tocar nada antes." />
 <NotesInterest text = "PROHIBIDO consumo de alcohol o estupefacientes (hay que recordarlo)." />
+<NotesInterest text = "Solo se pueden usar bbs BIODEGRADABLES." />
