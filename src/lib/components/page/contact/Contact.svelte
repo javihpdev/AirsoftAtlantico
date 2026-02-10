@@ -96,16 +96,26 @@
 	<div class="absolute inset-0 w-full bg-black/20"></div>
 	<div class="relative flex w-200 max-w-full flex-col gap-5 text-white md:gap-10">
 		<h2 class="text-2xl">CONTÁCTANOS</h2>
-		<p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
-		<a
-			href="https://www.google.com/maps/search/?api=1&query=28.389735584930182,-16.629758936999046"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
-			<p class="mb-4 text-2xl transition-all duration-700 hover:scale-105">
-				<strong>📍LOCALIZACIÓN:</strong> Mirador El Mazape, San Juan de la Rambla.
-			</p>
-		</a>
+		<div class="flex flex-col gap-5">
+			<p class="text-2xl">Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.</p>
+			<p>Si lo prefieres puedes contactarnos también por redes sociales.</p>
+			<div class="flex gap-6 ">
+				<a href="https://www.instagram.com/asoairatlan/" target="_blank" rel="noopener noreferrer">
+					   <img
+						   src="/images/logoInstragram.png"
+						   class="w-10 object-contain transition-all duration-700 hover:scale-110"
+						   alt="logo instagram"
+					   />
+				   </a>
+				   <a href="https://wa.me/34674957386" target="_blank" rel="noopener noreferrer">
+					   <img
+						   src="/images/logoWhatsapp.png"
+						   class="w-10 object-contain transition-all duration-700 hover:scale-110"
+						   alt="logo whatsapp"
+					   />
+				   </a>
+			</div>
+		</div>
 	</div>
 	<div class="relative flex w-full flex-col gap-2 md:w-150">
 		<Input bind:value={nombre} type="text" placeholder="Nombre" class="rounded-t-lg" />

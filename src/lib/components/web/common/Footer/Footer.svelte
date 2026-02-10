@@ -1,3 +1,10 @@
+<script lang="ts">
+
+    let yearCopyright = new Date().getFullYear();
+
+</script>
+
+
 <footer
     class="flex flex-col md:flex-row gap-2 bg-gray-900 p-6 justify-center gap-10 items-center text-center text-white"
 >
@@ -23,7 +30,7 @@
     <span class="bg-gray-200 md:w-0.5 md:h-50 w-full h-0.5 self-stretch"></span>
 
     <div class="flex flex-col items-center justify-center gap-2">
-        <p>Copyright © 2025 Asociación de Airsoft del Atlántico. Todos los derechos reservados.</p>
+        <p>Copyright © {yearCopyright} Asociación de Airsoft del Atlántico. Todos los derechos reservados.</p>
         <p>Nuestras Redes Sociales:</p>
         <div class="flex gap-4">
             <a href="https://www.instagram.com/asoairatlan/" target="_blank" rel="noopener noreferrer">
