@@ -53,7 +53,7 @@
                 href="https://www.javierhpdev.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="underline bg-[#00ACC9] "
+                class="underline text-[#00ACC9] "
             >
                 JavierHP
             </a>
