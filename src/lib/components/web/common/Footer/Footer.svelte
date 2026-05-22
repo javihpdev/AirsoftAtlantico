@@ -53,9 +53,9 @@
                 href="https://www.javierhpdev.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="underline hover:text-white"
+                class="underline bg-[#00ACC9] "
             >
-                javihpdev
+                JavierHP
             </a>
         </p>
     </div>
