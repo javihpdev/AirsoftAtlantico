@@ -12,7 +12,7 @@
 	const embedUrl = `https://www.google.com/maps?q=${latitude},${longitude}&hl=es&z=15&output=embed&t=k`;
 </script>
 
-<div class="w-full p-8">
+<div class="w-full mb-5  p-8">
 	<div class="mx-auto max-w-6xl">
 		<h2 class="mb-4 text-center text-4xl font-bold text-gray-900">SOBRE NOSOTROS</h2>
 		<p class="mb-12 text-center text-xl text-gray-700">Asociación de Airsoft del Atlántico</p>

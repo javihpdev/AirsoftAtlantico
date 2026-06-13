@@ -30,8 +30,10 @@
 {#if isOpen}
 <div  class="flex flex-col w-full lg:max-w-5xl p-8 rounded-xl shadow-lg shadow-blue-800 gap-8 bg-gradient-to-br from-gray-50 to-white {isOpen ? ' block' : ' hidden'}">
     <img src="images/logo.png" alt="logo" class="w-32 h-32 mx-auto mb-4"/>
-    <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
+    <button class="mt-2 cursor-pointer rounded-lg p-3 bg-red-500 hover:scale-105 hover:bg-gray-800 transition-all duration-600 duratio-600 text-white" onclick={toggleSection}>OCULTAR REGLAS</button>
 
+    <h1 class="text-2xl font-bold text-center text-gray-800 mb-4">REGLAS DE LA ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO</h1>
+    
     <!-- Sección Seguridad -->
     <section>
         <h2 class="text-xl font-bold text-red-600 mb-4 flex items-center">

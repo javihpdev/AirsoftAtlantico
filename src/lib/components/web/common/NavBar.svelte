@@ -26,7 +26,7 @@
 </script>
 
 <nav
-	class="z-100 flex w-full max-w-full flex-col items-center justify-center gap-2 bg-gray-800 p-3 text-white lg:flex-row lg:gap-10 lg:p-2"
+	class="sticky top-0 z-50 flex w-full max-w-full flex-col items-center justify-center gap-2 bg-gray-800 shadow-lg border-b border-gray-700 p-3 text-white lg:flex-row lg:gap-10 lg:p-2"
 >
 	<div class="flex items-center justify-center overflow-hidden rounded-full">
 		<img class="object-fill" src="/images/logo.png" alt="logo" width="85" height="85" />
@@ -43,7 +43,7 @@
 					MODOS DE JUEGO {isGameModesOpen ? '▴' : '▾'}
 				</button>
 				<div
-					class={`absolute left-0 mt-2 w-60 overflow-hidden rounded-lg bg-gray-700 shadow-lg transition-all duration-800 ease-in-out ${isGameModesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+					class={`absolute -left-9 mt-2 w-60 overflow-hidden rounded-lg bg-gray-800 shadow-lg transition-all duration-800 ease-in-out ${isGameModesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
 				>
 					{#each gameModes as mode}
 						<Link
@@ -84,11 +84,11 @@
 				></span>
 			</button>
 		</div>
-		<!-- Menu con los links al desplegar el menu hamburguesa -->
+		<!-- Menu con los links al desplegar el menu hamburguesa en moviles -->
 		<div
 			class={`overflow-hidden transition-all duration-700 ease-in-out ${isOpen ? 'max-h-100 opacity-100' : 'max-h-0 opacity-0'}`}
 		>
-			<div class="flex flex-col items-center gap-5 p-4 text-lg lg:hidden">
+			<div class="grid grid-cols-2 justify-center items-center text-center gap-5 p-4 text-lg lg:hidden">
 				<button onclick={closeMenu}>
 					<Link href="/">INICIO</Link>
 				</button>

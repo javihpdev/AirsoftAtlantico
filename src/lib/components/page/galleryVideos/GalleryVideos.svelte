@@ -25,7 +25,7 @@
 	}
 </script>
 
-<div class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32 p-8">
+<div class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32 p-8 shadow-md">
 	<h2 class="text-4xl font-bold max-w-[85%] text-center">GALERÍA DE VÍDEOS</h2>
 		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Vídeos de las partidas en RAID, realizados por nuestro equipo y creadores de contenido invitados</p>
 

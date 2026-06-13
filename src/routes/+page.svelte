@@ -9,7 +9,7 @@
  
 
     let scrollY = $state(0);
-	let showScrollButton = $derived(() => scrollY > 2500);
+	let showScrollButton = $derived(() => scrollY > 600);
     
    // funcion para establecer el volumen del video al 10% por defecto
 	function setVolume(event: Event) {
@@ -31,36 +31,51 @@
 
 <section class="flex h-full w-full flex-col max-w-full justify-center items-center">
     
-    <!-- Imagen con texto y efecto parallax suave -->
-    <div class="w-full h-screen relative overflow-hidden bg-gray-800">
-        <p 
-            class="absolute md:top-20 top-10 left-1/2 -translate-x-1/2 text-white text-[2rem] md:text-[4rem] lg:text-[4rem] text-center z-10 drop-shadow-2xl px-4"
-            style="opacity: {Math.max(0, 1 - scrollY / 400)}"
-        >
-            ASOCIACIÓN DE AIRSOFT DEL ATLÁNTICO
-        </p>
-        <img 
-            src="images/galleryImages/_M1A3364.avif" 
-            alt="foto inicio" 
-            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 min-w-full min-h-full object-cover"
-            style="transform: translate(0%, calc(-0% + {scrollY * 0.3}px))"
+    <!-- Hero con parallax -->
+    <div class="w-full h-screen relative overflow-hidden bg-gray-900">
+        <img
+            src="images/galleryImages/_M1A3364.avif"
+            alt="foto inicio"
+            class="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover"
+            style="transform: translate(-50%, calc(-50% + {scrollY * 0.3}px))"
         />
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-black/60" style="z-index:1"></div>
+        <div
+            class="absolute inset-0 flex flex-col md:justify-center items-center px-4 mt-20 text-center"
+            style="opacity: {Math.max(0, 1 - scrollY / 400)}; z-index: 2"
+        >
+            <p class="text-white text-[2rem] md:-mt-50 md:text-[3.5rem] lg:text-[5rem] drop-shadow-2xl tracking-[3px] leading-tight font-bold">
+                ASOCIACIÓN DE AIRSOFT<br/><span class="text-[#00ACC9]">DEL ATLÁNTICO</span>
+            </p>
+        </div>
+        <div
+            class="absolute bottom-40 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white"
+            style="opacity: {Math.max(0, 1 - scrollY / 250)}; z-index: 2"
+        >
+            <span class="text-xs tracking-widest uppercase opacity-90">Descubre más</span>
+            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+        </div>
     </div>
 
-    <section class="flex relative flex-col gap-2 text-4xl font-bold text-center w-full overflow-hidden justify-center items-center">
-        <img 
-            src="images/galleryImages/_M1A3535.avif" 
-            alt="foto presentación" 
-            class="z-10 absolute min-w-full min-h-full object-cover"
+    <section class="relative flex w-full overflow-hidden justify-center items-center min-h-[500px]">
+        <img
+            src="images/galleryImages/_M1A3535.avif"
+            alt="foto presentación"
+            class="absolute inset-0 min-w-full min-h-full object-cover brightness-[0.35]"
         />
-        <div class="relative z-20 w-full py-10 text-white flex flex-col gap-6 justify-center max-w-[70%] items-center">
-            <p class="tracking-[5px]">VÍDEO DE PRESENTACIÓN</p>
-            <video 
-                src="videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4" 
-                controls 
-                controlslist='nodownload' 
+        <div class="relative z-10 w-full py-16 text-white flex flex-col gap-8 justify-center max-w-[90%] md:max-w-[70%] items-center">
+            <div class="flex flex-col items-center gap-1">
+                <span class="text-[#00ACC9] text-sm tracking-[6px] uppercase">Mira lo que hacemos</span>
+                <p class="tracking-[4px] text-2xl md:text-3xl font-bold">VÍDEO DE PRESENTACIÓN</p>
+            </div>
+            <video
+                src="videos/4259e1e5-d72a-44f1-9c02-c5a462bea0fc.mp4"
+                controls
+                controlslist='nodownload'
                 onloadedmetadata={setVolume}
-                class="rounded-lg shadow-lg"
+                class="rounded-xl shadow-2xl ring-1 ring-white/20 md:max-w-[30%] w-full"
             >
                 <track kind="captions" src="" label="Spanish" srclang="es" default />
             </video>
@@ -76,7 +91,7 @@
     <section id="rules" class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32">
     <h2 class="text-4xl font-bold max-w-[85%] text-center">REGLAS</h2>
 		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Reglas de Seguridad, Réplicas, Distancias y Notas de Interés</p>
-    <div class="bg-gradient-to-r from-gray-50 via-cyan-400 to-yellow-300 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
+    <div class="bg-gradient-to-r from-gray-50 to-cyan-300 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
             <Rules/>
         </div>
     </section>
