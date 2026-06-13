@@ -91,7 +91,7 @@
     <section id="rules" class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32">
     <h2 class="text-4xl font-bold max-w-[85%] text-center">REGLAS</h2>
 		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Reglas de Seguridad, Réplicas, Distancias y Notas de Interés</p>
-    <div class="bg-gradient-to-r from-gray-50 to-cyan-300 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40">
+    <div class="bg-gradient-to-r from-gray-50 to-cyan-200 shadow-2xl rounded-2xl my-8 text-lg text-gray-900 text-center transition-transform duration-300 hover:shadow-cyan-400/40 max-w-[90%]">
             <Rules/>
         </div>
     </section>
