@@ -2,7 +2,11 @@
 	import Footer from '$lib/components/web/common/Footer/Footer.svelte';
 	import NavBar from '$lib/components/web/common/NavBar.svelte';
 	import '../app.css';
+	import { dev } from '$app/environment';
+	import { injectAnalytics } from '@vercel/analytics/sveltekit';
+	injectAnalytics({ mode: dev ? 'development' : 'production' });
 
+	
 	let { children } = $props();
 </script>
 

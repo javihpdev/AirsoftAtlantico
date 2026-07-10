@@ -84,6 +84,7 @@
 	"dependencies": {
 		"@beyonk/svelte-google-analytics": "^2.6.4",
 		"@sveltejs/adapter-vercel": "^6.1.1",
+		"@vercel/analytics": "^2.0.1",
 		"imagemagick": "^0.1.3",
 		"nodemailer": "^7.0.9"
 	}
