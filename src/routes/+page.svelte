@@ -2,7 +2,7 @@
 	import AboutUs from "$lib/components/page/aboutUs/AboutUs.svelte";
 	import Contact from "$lib/components/page/contact/Contact.svelte";
 	import GalleryImages from "$lib/components/page/galleryImages/GalleryImages.svelte";
-	import GalleryVideos from "$lib/components/page/galleryVideos/GalleryVideos.svelte";
+	import GalleryVideos from "$lib/components/page/Influencers/Influencers.svelte";
 	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
     import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
