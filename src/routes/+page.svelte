@@ -5,7 +5,7 @@
 	import GalleryVideos from "$lib/components/page/galleryVideos/GalleryVideos.svelte";
 	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
-
+    import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
  
 
     let scrollY = $state(0);
@@ -123,9 +123,7 @@
         class="fixed md:bottom-20 md:right-10 bottom-20 right-2 z-1000 bg-[#00ACC9] hover:bg-gray-800 text-white p-4 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
         aria-label="Volver arriba"
     >
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
-        </svg>
+       <ArrowUpIcon />
     </button>
 {/if}
 

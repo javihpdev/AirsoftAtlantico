@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// Coordenadas del Mirador El Mazape
 
 	const latitude = 28.389735584930182;
