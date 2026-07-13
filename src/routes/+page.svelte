@@ -2,10 +2,10 @@
 	import AboutUs from "$lib/components/page/aboutUs/AboutUs.svelte";
 	import Contact from "$lib/components/page/contact/Contact.svelte";
 	import GalleryImages from "$lib/components/page/galleryImages/GalleryImages.svelte";
-	import GalleryVideos from "$lib/components/page/Influencers/Influencers.svelte";
 	import GameModes from "$lib/components/page/gamesmodes/GameModes.svelte";
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
     import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
+	import Influencers from "$lib/components/page/Influencers/Influencers.svelte";
  
 
     let scrollY = $state(0);
@@ -102,8 +102,8 @@
         <GalleryImages/>
     </section>
 
-    <section id="galleryVideos" class="scroll-mt-32">
-        <GalleryVideos/>
+    <section id="influencers" class="scroll-mt-32">
+        <Influencers />
     </section>
 
     <!-- seccion de nosotros-->

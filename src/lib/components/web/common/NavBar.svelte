@@ -102,7 +102,7 @@
 				</div>
 				<Link href="/#rules">REGLAS</Link>
 				<Link href="/#galleryImages">IMÁGENES</Link>
-				<Link href="/#galleryVideos">VÍDEOS</Link>
+				<Link href="/#influencers">INFLUENCERS</Link>
 				<Link href="/#aboutUs">NOSOTROS</Link>
 				<Link href="/#contact">CONTACTO</Link>
 			</div>
@@ -141,7 +141,7 @@
 			<Link href="/#galleryImages">IMÁGENES</Link>
 		</button>
 		<button onclick={closeMenu}>
-			<Link href="/#galleryVideos">VÍDEOS</Link>
+			<Link href="/#influencers">INFLUENCERS</Link>
 		</button>
 		<button onclick={closeMenu}>
 			<Link href="/#aboutUs">NOSOTROS</Link>
