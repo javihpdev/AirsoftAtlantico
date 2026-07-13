@@ -91,12 +91,14 @@
 						class={`absolute -left-9 mt-2 w-60 overflow-hidden rounded-lg bg-gray-800 shadow-lg transition-all duration-800 ease-in-out ${isGameModesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
 					>
 						{#each gameModes as mode}
-							<Link
-								href={mode.href}
-								class="block px-4 py-3 first:rounded-t-lg last:rounded-b-lg hover:bg-gray-600"
-							>
-								{mode.name}
-							</Link>
+							<button onclick={toggleGameModes}>
+								<Link
+									href={mode.href}
+									class="block px-4 py-3 first:rounded-t-lg last:rounded-b-lg hover:bg-gray-600"
+								>
+									{mode.name}
+								</Link>
+							</button>
 						{/each}
 					</div>
 				</div>
