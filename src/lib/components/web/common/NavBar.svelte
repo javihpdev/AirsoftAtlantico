@@ -121,7 +121,7 @@
 		onclick={closeMenu}
 	></button>
 	<div
-		class={`absolute top-20 right-0 flex h-[55%] w-72 max-w-[80%] transform flex-col items-center justify-center gap-5 rounded-bl-2xl bg-gray-800 p-6 text-center text-lg shadow-2xl transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+		class={`absolute top-20 right-0 flex h-130 w-72 max-w-[80%] transform flex-col items-center justify-center gap-5 rounded-bl-2xl bg-gray-800 p-6 text-center text-lg shadow-2xl transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
 	>
 		<!-- boton para cerrar navbar, se puede cerrar pulsando la pantalla, pero esto es mas vistoso -->
 		<button onclick={closeMenu}>
