@@ -1,0 +1,3 @@
+<svg class="h-6 w-6 text-sky-500" viewBox="0 0 24 24" fill="currentColor"
+									><path d="M12 2l3 7h7l-5.5 4 2 7L12 16l-6.5 4 2-7L2 9h7z" /></svg
+								>

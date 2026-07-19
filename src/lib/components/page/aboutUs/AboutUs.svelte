@@ -1,6 +1,8 @@
 <script lang="ts">
 	// Coordenadas del Mirador El Mazape
 
+	import Location from "$lib/components/icons/Location.svelte";
+
 	const latitude = 28.389735584930182;
 	const longitude = -16.629758936999046;
 	const placeName = 'Mirador El Mazape, La Guancha';
@@ -55,11 +57,7 @@
 					rel="noopener noreferrer"
 					class="flex items-center gap-2 rounded-lg bg-[#00ACC9] px-6 py-3 text-white shadow-lg transition-all duration-300 duration-600 hover:scale-105 hover:bg-gray-800"
 				>
-					<svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-						<path
-							d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
-						/>
-					</svg>
+					<Location/>
 					Abrir en Google Maps
 				</a>
 			</div>

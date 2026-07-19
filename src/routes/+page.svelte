@@ -6,6 +6,8 @@
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
     import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
 	import Influencers from "$lib/components/page/Influencers/Influencers.svelte";
+	import ArrowDowns from "$lib/components/icons/ArrowDown.svelte";
+	import ArrowDown from "$lib/components/icons/ArrowDown.svelte";
  
 
     let scrollY = $state(0);
@@ -53,9 +55,7 @@
             style="opacity: {Math.max(0, 1 - scrollY / 250)}; z-index: 2"
         >
             <span class="text-xs tracking-widest uppercase opacity-90">Descubre más</span>
-            <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-            </svg>
+            <ArrowDown />
         </div>
     </div>
 

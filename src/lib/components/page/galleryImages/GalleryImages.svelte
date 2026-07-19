@@ -1,57 +1,30 @@
 <script lang="ts">
-   const images = [
-  'images/galleryImages/_14A1028.avif',
-  'images/galleryImages/_14A1029.avif',
-  'images/galleryImages/_M1A3275.avif',
-  'images/galleryImages/_M1A3277.avif',
-  'images/galleryImages/_M1A3280.avif',
-  'images/galleryImages/_M1A3283.avif',
-  'images/galleryImages/_M1A3286.avif',
-  'images/galleryImages/_M1A3298.avif',
-  'images/galleryImages/_M1A3301.avif',
-  'images/galleryImages/_M1A3306.avif',
-  'images/galleryImages/_M1A3311.avif',
-  'images/galleryImages/_M1A3312.avif',
-  'images/galleryImages/_M1A3319.avif',
-  'images/galleryImages/_M1A3323.avif',
-  'images/galleryImages/_M1A3352.avif',
-  'images/galleryImages/_M1A3364.avif',
-  'images/galleryImages/_M1A3371.avif',
-  'images/galleryImages/_M1A3381.avif',
-  'images/galleryImages/_M1A3384.avif',
-  'images/galleryImages/_M1A3422.avif',
-  'images/galleryImages/_M1A3446.avif',
-  'images/galleryImages/_M1A3449.avif',
-  'images/galleryImages/_M1A3455.avif',
-  'images/galleryImages/_M1A3457.avif',
-  'images/galleryImages/_M1A3496.avif',
-  'images/galleryImages/_M1A3506.avif',
-  'images/galleryImages/_M1A3516.avif',
-  'images/galleryImages/_M1A3534.avif',
-  'images/galleryImages/_M1A3535.avif',
-  'images/galleryImages/_M1A3540.avif',
-  'images/galleryImages/_M1A3546.avif'
-];
+	import { images } from './GalleryImages.svelte.js';
 
-    let selectedImage = $state(null as string | null);
-    let visibleImages = $state(10); // Mostrar solo 10 inicialmente
+	let selectedImage = $state(null as string | null);
+	let visibleImages = $state(10); // Mostrar solo 10 inicialmente
 
-    function loadMore() {
-        visibleImages += 10;
-    }
+	function loadMore() {
+		visibleImages += 10;
+	}
 
-    function openImage(image: string) {
-        selectedImage = image;
-    }
+	function loadLess() {
+		visibleImages = 10;
+		window.location.href='/#galleryImages';
+	}
 
-    function closeImage() {
-        selectedImage = null;
-    }
+	function openImage(image: string) {
+		selectedImage = image;
+	}
+
+	function closeImage() {
+		selectedImage = null;
+	}
 </script>
 
-<div class="flex flex-col w-full max-w-full justify-center items-center scroll-mt-32 p-8">
-	<h2 class="text-4xl font-bold max-w-[85%] text-center">GALERÍA DE IMÁGENES</h2>
-		<p class="mt-2 text-gray-600 max-w-[85%] text-center">Imágenes de las partidas en RAID</p>
+<div class="flex w-full max-w-full scroll-mt-32 flex-col items-center justify-center p-8">
+	<h2 class="max-w-[85%] text-center text-4xl font-bold">GALERÍA DE IMÁGENES</h2>
+	<p class="mt-2 max-w-[85%] text-center text-gray-600">Imágenes de las partidas en RAID</p>
 	<div class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
 		{#each images.slice(0, visibleImages) as photo, index}
 			<button
@@ -63,7 +36,7 @@
 					alt="Airsoft Atlántico {index + 1}"
 					class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
 					loading="lazy"
-					/>
+				/>
 			</button>
 		{/each}
 	</div>
@@ -72,9 +45,19 @@
 		<div class="mt-8 flex justify-center">
 			<button
 				onclick={loadMore}
-				class="rounded-lg bg-[#00ACC9] hover:bg-gray-800 hover:scale-105 px-6 py-3 text-white transition-all duration-600 cursor-pointer"
+				class="cursor-pointer rounded-lg bg-[#00ACC9] px-6 py-3 text-white transition-all duration-600 hover:scale-105 hover:bg-gray-800"
 			>
 				Cargar más imágenes ({images.length - visibleImages} restantes)
+			</button>
+		</div>
+	{/if}
+	{#if visibleImages > images.length}
+		<div class="mt-8 flex justify-center">
+			<button
+				onclick={loadLess}
+				class="cursor-pointer rounded-lg bg-[#00ACC9] px-6 py-3 text-white transition-all duration-600 hover:scale-105 hover:bg-gray-800"
+			>
+				Ocultar imágenes
 			</button>
 		</div>
 	{/if}
@@ -95,10 +78,6 @@
 		>
 			×
 		</button>
-		<img
-			src={selectedImage}
-			alt="Imagen ampliada"
-			class="max-h-full max-w-full"
-		/>
+		<img src={selectedImage} alt="Imagen ampliada" class="max-h-full max-w-full" />
 	</div>
 {/if}

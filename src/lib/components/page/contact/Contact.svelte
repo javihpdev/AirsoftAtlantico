@@ -2,6 +2,7 @@
 	import Input from '$lib/components/common/form/Input.svelte';
 	import MessageOk from './MessageForm/MessageOk.svelte';
 	import MessageError from './MessageForm/MessageError.svelte';
+	import SpinCircle from '$lib/components/icons/SpinCircle.svelte';
 
 	let nombre = $state('');
 	let telefono = $state('');
@@ -12,6 +13,7 @@
 	let mensajeError = $state(false);
 	let acceptPrivacy = $state(false);
 	let showPrivacyError = $state(false);
+	let emailInvalid = $state(false);
 	let isLoading = $state(false);
 	let fieldNotCompleted = $state(false);
 
@@ -39,7 +41,7 @@
 		fieldNotCompleted = false;
 
 		if (!validarEmail(email)) {
-			alert('Por favor ingresa un correo electrónico válido');
+			emailInvalid = true
 			return;
 		}
 
@@ -134,17 +136,23 @@
             He leído y acepto la <a href="PrivacyPolicy" target="_blank" class="underline hover:text-gray-200">Política de Privacidad</a>
         </span>
     </label>
-	{#if fieldNotCompleted}
-		<p class="bg-gray-900 p-5 text-red-500 text-sm">Por favor, completa todos los campos obligatorios.</p>
-	{/if}
-	{#if showPrivacyError}
-		<p class="bg-gray-900 p-5 text-red-500 text-sm">Debes aceptar la Política de Privacidad para continuar.</p>
-	{/if}
-		<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-50 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
+	<div class="flex justify-center items-center">
+		{#if fieldNotCompleted}
+			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Por favor, completa todos los campos obligatorios.</p>
+		{/if}
+	
+		{#if showPrivacyError}
+			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Debes aceptar la Política de Privacidad para continuar.</p>
+		{/if}
+	
+		{#if emailInvalid}
+			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Debes introducir un email válido</p>
+		{/if}
+	</div>
+
+	<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-50 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
     {isLoading ? "Enviando Mensaje..." : "Enviar"}
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-    </svg>
+   <SpinCircle />
 </button>
 	</div>
 </div>

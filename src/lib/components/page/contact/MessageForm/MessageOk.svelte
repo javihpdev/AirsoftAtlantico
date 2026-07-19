@@ -1,4 +1,7 @@
 <script lang="ts">
+	import CheckGreen from "$lib/components/icons/CheckGreen.svelte";
+	import WarningYellow from "$lib/components/icons/WarningYellow.svelte";
+
 
 
 	type Props = {
@@ -24,31 +27,7 @@
 				<div
 					class="flex flex-col items-center justify-center gap-5 rounded-3xl border border-slate-700 bg-gray-900 p-8 md:p-12"
 				>
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width="64"
-						height="64"
-						fill="none"
-						viewBox="0 0 64 64"
-					>
-						<circle
-							cx="32"
-							cy="32"
-							r="30"
-							fill="#22c55e"
-							fill-opacity="0.15"
-							stroke="#22c55e"
-							stroke-width="4"
-						/>
-						<path
-							d="M20 34l8 8 16-16"
-							stroke="#22c55e"
-							stroke-width="4"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							fill="none"
-						/>
-					</svg>
+					<CheckGreen />
 					<p class="text-3xl tracking-wide text-white md:text-4xl">¡Mensaje Enviado!</p>
 					<p class="text-center text-slate-400">Gracias por ponerte en contacto conmigo.</p>
 					<p class="text-center text-slate-400">
@@ -57,19 +36,7 @@
 					<div class="mt-2 rounded-xl bg-yellow-500/10 border border-yellow-500/30 p-4 w-full">
             <div class="flex items-start gap-3">
 				<!-- Imagen de advertencia -->
-                <svg 
-                    class="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" 
-                    fill="none" 
-                    stroke="currentColor" 
-                    viewBox="0 0 24 24"
-                >
-                    <path 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round" 
-                        stroke-width="2" 
-                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                    />
-                </svg>
+               <WarningYellow />
 				<!-- Cuadro de advertencia -->
                 <div class="text-sm text-yellow-200/90">
                     <p class="font-semibold mb-1">Si no recibes el correo:</p>
