@@ -1,8 +1,10 @@
 <script lang="ts">
 	import Input from '$lib/components/common/form/Input.svelte';
+	import FieldError from '$lib/components/common/form/FieldError.svelte';
 	import MessageOk from './MessageForm/MessageOk.svelte';
 	import MessageError from './MessageForm/MessageError.svelte';
-	import SpinCircle from '$lib/components/icons/SpinCircle.svelte';
+	import Email from '$lib/components/icons/Email.svelte';
+	import SpinCircleIcon from '$lib/components/icons/SpinCircleIcon.svelte';
 
 	let nombre = $state('');
 	let telefono = $state('');
@@ -16,6 +18,11 @@
 	let emailInvalid = $state(false);
 	let isLoading = $state(false);
 	let fieldNotCompleted = $state(false);
+
+	let nombreError = $derived(fieldNotCompleted && !nombre);
+	let emailError = $derived(emailInvalid || (fieldNotCompleted && !email));
+	let asuntoError = $derived(fieldNotCompleted && !asunto);
+	let mensajeInvalid = $derived(fieldNotCompleted && !mensaje);
 
 	function validarEmail(email: string): boolean {
 		const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -120,39 +127,52 @@
 		</div>
 	</div>
 	<div class="relative flex w-full flex-col gap-2 md:w-150">
-		<Input bind:value={nombre} type="text" placeholder="Nombre" class="rounded-t-lg" />
-		<Input bind:value={email} type="email" placeholder="Correo electrónico" />
-		<Input bind:value={asunto} type="text" placeholder="Asunto" />
+		<Input bind:value={nombre} type="text" placeholder="Nombre" class="rounded-t-lg" error={nombreError} />
+		{#if nombreError}
+			<FieldError message="El nombre es obligatorio." />
+		{/if}
+
+		<Input bind:value={email} type="email" placeholder="Correo electrónico" error={emailError} />
+		{#if emailInvalid}
+			<FieldError message="Debes introducir un email válido." />
+		{:else if emailError}
+			<FieldError message="El email es obligatorio." />
+		{/if}
+
+		<Input bind:value={asunto} type="text" placeholder="Asunto" error={asuntoError} />
+		{#if asuntoError}
+			<FieldError message="El asunto es obligatorio." />
+		{/if}
+
 		<textarea
 			bind:value={mensaje}
 			placeholder="Tu mensaje"
 			rows="7"
 			cols="50"
-			class="rounded-b-lg bg-gray-800 p-2 text-xl text-white caret-white outline-none"
+			aria-invalid={mensajeInvalid}
+			class="rounded-b-lg bg-gray-800 p-2 text-xl text-white caret-white outline-none border {mensajeInvalid ? 'border-red-500' : 'border-transparent'}"
 		></textarea>
+		{#if mensajeInvalid}
+			<FieldError class="text-red-500 bg-slate-800 p-3 rounded-2" message="El mensaje es obligatorio." />
+		{/if}
+
 		<label class="flex items-center gap-3 text-white text-lg">
         <input type="checkbox" bind:checked={acceptPrivacy} class="mt-1" />
         <span>
             He leído y acepto la <a href="PrivacyPolicy" target="_blank" class="underline hover:text-gray-200">Política de Privacidad</a>
         </span>
     </label>
-	<div class="flex justify-center items-center">
-		{#if fieldNotCompleted}
-			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Por favor, completa todos los campos obligatorios.</p>
-		{/if}
-	
-		{#if showPrivacyError}
-			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Debes aceptar la Política de Privacidad para continuar.</p>
-		{/if}
-	
-		{#if emailInvalid}
-			<p class="bg-gray-900 p-5 text-red-500 text-sm rounded-2xl">Debes introducir un email válido</p>
-		{/if}
-	</div>
+	{#if showPrivacyError}
+		<FieldError class="text-red-500 bg-slate-800 p-3 rounded-2" message="Debes aceptar la Política de Privacidad para continuar." />
+	{/if}
 
-	<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 w-50 text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
+	<button onclick={sendMessage} type="submit" class="flex items-center justify-center gap-2 p-3 bg-[#00ACC9] transition-all duration-600 {isLoading? "w-70" :"w-50"} text-lg hover:scale-105 hover:bg-gray-800 text-white rounded-xl cursor-pointer text-center">
     {isLoading ? "Enviando Mensaje..." : "Enviar"}
-   <SpinCircle />
+	{#if isLoading}
+	<SpinCircleIcon />
+	{:else}
+	<Email />
+	{/if}
 </button>
 	</div>
 </div>
@@ -163,4 +183,5 @@
 
 {#if mensajeError}
 	<MessageError bind:mensajeError />
+
 {/if}
