@@ -38,6 +38,7 @@
         <img
             src="images/galleryImages/_M1A3364.avif"
             alt="foto inicio"
+            fetchpriority="high"
             class="absolute top-1/2 left-1/2 min-w-full min-h-full object-cover"
             style="transform: translate(-50%, calc(-50% + {scrollY * 0.3}px))"
         />
