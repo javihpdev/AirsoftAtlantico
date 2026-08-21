@@ -6,7 +6,6 @@
 	import Rules from "$lib/components/page/rulesAirsoft/Rules.svelte";
     import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
 	import Influencers from "$lib/components/page/Influencers/Influencers.svelte";
-	import ArrowDowns from "$lib/components/icons/ArrowDown.svelte";
 	import ArrowDown from "$lib/components/icons/ArrowDown.svelte";
  
 
@@ -60,7 +59,8 @@
         </div>
     </div>
 
-    <section class="relative flex w-full overflow-hidden justify-center items-center min-h-[500px]">
+    <!-- ANCHOR: Descomentar cuando este el campo disponible -->
+    <!-- <section class="relative flex w-full overflow-hidden justify-center items-center min-h-[500px]">
         <img
             src="images/galleryImages/_M1A3535.avif"
             alt="foto presentación"
@@ -81,7 +81,7 @@
                 <track kind="captions" src="" label="Spanish" srclang="es" default />
             </video>
         </div>
-    </section>
+    </section> -->
 
     <!-- seccion de los modos de juego -->
     <section id="gameModes" class="flex w-full justify-center items-center scroll-mt-32">

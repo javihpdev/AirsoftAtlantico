@@ -88,13 +88,13 @@
 						MODOS DE JUEGO {isGameModesOpen ? '▴' : '▾'}
 					</button>
 					<div
-						class={`absolute -left-9 mt-2 w-60 overflow-hidden rounded-lg bg-gray-800 shadow-lg transition-all duration-800 ease-in-out ${isGameModesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+						class={`flex flex-col justify-center items-center text-center w-60 absolute -left-9 mt-2 overflow-hidden rounded-lg bg-gray-800 shadow-lg transition-all duration-800 ease-in-out ${isGameModesOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
 					>
 						{#each gameModes as mode}
-							<button onclick={toggleGameModes}>
+							<button onclick={toggleGameModes} class="w-full">
 								<Link
 									href={mode.href}
-									class="block px-4 py-3 first:rounded-t-lg last:rounded-b-lg hover:bg-gray-600"
+									class="block py-3 w-full hover:bg-gray-600"
 								>
 									{mode.name}
 								</Link>
@@ -123,33 +123,31 @@
 		onclick={closeMenu}
 	></button>
 	<div
-		class={`absolute top-20 right-0 flex h-130 w-72 max-w-[80%] transform flex-col items-center justify-center gap-5 rounded-bl-2xl bg-gray-800 p-6 text-center text-lg shadow-2xl transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+		class={`absolute top-20 right-0 flex max-h-[calc(100vh-5rem)] w-72 max-w-[80%] transform flex-col items-center justify-center gap-5 overflow-y-auto rounded-bl-2xl bg-gray-800 p-6 text-center text-lg shadow-2xl transition-transform duration-500 ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
 	>
-		<!-- boton para cerrar navbar, se puede cerrar pulsando la pantalla, pero esto es mas vistoso -->
-		<button onclick={closeMenu}>
-			<ArrowUpIcon class="h-10 w-10 rotate-90 text-white " />
+		
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/" class="block w-full py-2 hover:bg-gray-600">INICIO</Link>
 		</button>
-
-		<button onclick={closeMenu}>
-			<Link href="/">INICIO</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#gameModes" class="block w-full py-2 tracking-[2px] hover:bg-gray-600">
+				MODOS DE JUEGO
+			</Link>
 		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#gameModes" class="tracking-[2px]">MODOS DE JUEGO</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#rules" class="block w-full py-2 hover:bg-gray-600">REGLAS</Link>
 		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#rules">REGLAS</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#galleryImages" class="block w-full py-2 hover:bg-gray-600">IMÁGENES</Link>
 		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#galleryImages">IMÁGENES</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#influencers" class="block w-full py-2 hover:bg-gray-600">INFLUENCERS</Link>
 		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#influencers">INFLUENCERS</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#aboutUs" class="block w-full py-2 hover:bg-gray-600">NOSOTROS</Link>
 		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#aboutUs">NOSOTROS</Link>
-		</button>
-		<button onclick={closeMenu}>
-			<Link href="/#contact">CONTACTO</Link>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#contact" class="block w-full py-2 hover:bg-gray-600">CONTACTO</Link>
 		</button>
 
 		<!-- Separacion -->
