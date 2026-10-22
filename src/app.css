@@ -1,7 +1,17 @@
 @import 'tailwindcss';
 
+@theme {
+  --text-xs: 0.875rem;
+  --text-sm: 1rem;
+}
+
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.5;
 }
 
 /* Importar la fuente personalizada desde Google Fonts */

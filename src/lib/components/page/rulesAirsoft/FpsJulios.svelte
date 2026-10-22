@@ -5,12 +5,12 @@
 	<div class="overflow-x-auto -mx-2 md:mx-0">
 		<div class="inline-block min-w-full align-middle">
 			<div class="overflow-hidden shadow-md rounded-lg">
-				<table class="min-w-full border-collapse bg-white text-[9px] md:text-sm">
+				<table class="min-w-full border-collapse bg-white text-xs md:text-sm">
 					<thead class="bg-gray-200">
 						<tr>
 							<th rowspan="2" class="hidden md:table-cell border border-gray-300 px-2 py-2 font-bold">RÉPLICA</th>
 							<th rowspan="2" class="hidden md:table-cell border border-gray-300 px-2 py-2 font-bold whitespace-nowrap">Energía</th>
-							<th colspan="10" class="border border-gray-300 px-2 py-1 md:py-2 font-bold text-[8px] md:text-sm">VELOCIDAD MÁXIMA (FPS)</th>
+							<th colspan="10" class="border border-gray-300 px-2 py-1 md:py-2 font-bold text-xs md:text-sm">VELOCIDAD MÁXIMA (FPS)</th>
 						</tr>
 						<tr>
 							<th class="border border-gray-300 px-0.5 py-1 md:px-2 md:py-2 font-bold">0,2g</th>

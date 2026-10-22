@@ -7,6 +7,7 @@
     import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
 	import Influencers from "$lib/components/page/Influencers/Influencers.svelte";
 	import ArrowDown from "$lib/components/icons/ArrowDown.svelte";
+	import Events from "$lib/components/page/Events/events.svelte";
  
 
     let scrollY = $state(0);
@@ -82,6 +83,11 @@
             </video>
         </div>
     </section> -->
+
+    <!-- seccion de los siguientes eventos -->
+    <section id="upcomingEvents" class="flex w-full justify-center items-center scroll-mt-32">
+        <Events/>
+    </section>
 
     <!-- seccion de los modos de juego -->
     <section id="gameModes" class="flex w-full justify-center items-center scroll-mt-32">

@@ -6,7 +6,7 @@
 
 
 <footer
-    class="flex flex-col md:flex-row gap-2 bg-gray-900 p-6 justify-center gap-10 items-center text-center text-white"
+    class="flex flex-col md:flex-row bg-gray-900 p-6 justify-center gap-10 items-center text-center text-white"
 >
     <div class="flex flex-col gap-2 text-lg">
         <p class="text-4xl">SOPORTE</p>

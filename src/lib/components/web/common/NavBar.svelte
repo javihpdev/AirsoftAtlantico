@@ -1,6 +1,5 @@
 <script>
 	import Link from '$lib/components/common/form/Link.svelte';
-	import ArrowUpIcon from '$lib/components/icons/ArrowUp.svelte';
 
 	let isOpen = $state(false);
 	let isGameModesOpen = $state(false);
@@ -49,7 +48,7 @@
 		</div>
 
 		<p
-			class={`absolute top-1/2 left-1/2 -translate-x-[45%] -translate-y-1/2 text-center text-[0.65rem] leading-tight font-bold tracking-[2px] transition-opacity duration-700 ease-in-out sm:text-sm ${isScrolled ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
+			class={`absolute top-1/2 left-1/2 -translate-x-[45%] -translate-y-1/2 text-center text-xs leading-tight font-bold tracking-[2px] transition-opacity duration-700 ease-in-out sm:text-sm ${isScrolled ? 'opacity-100' : 'pointer-events-none opacity-0'}`}
 		>
 			ASOCIACIÓN DE AIRSOFT<br /><span class="text-[#00ACC9]">DEL ATLÁNTICO</span>
 		</p>
@@ -102,6 +101,7 @@
 						{/each}
 					</div>
 				</div>
+				<Link href="/#upcomingEvents">EVENTOS</Link>
 				<Link href="/#rules">REGLAS</Link>
 				<Link href="/#galleryImages">IMÁGENES</Link>
 				<Link href="/#influencers">INFLUENCERS</Link>
@@ -118,7 +118,6 @@
 >
 	<button
 		aria-label="Cerrar menu"
-		tabindex={isOpen ? 0 : -1}
 		class={`absolute inset-0 bg-black/60 transition-opacity duration-500 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
 		onclick={closeMenu}
 	></button>
@@ -133,6 +132,9 @@
 			<Link href="/#gameModes" class="block w-full py-2 tracking-[2px] hover:bg-gray-600">
 				MODOS DE JUEGO
 			</Link>
+		</button>
+		<button onclick={closeMenu} class="w-full">
+			<Link href="/#upcomingEvents" class="block w-full py-2 hover:bg-gray-600">EVENTOS</Link>
 		</button>
 		<button onclick={closeMenu} class="w-full">
 			<Link href="/#rules" class="block w-full py-2 hover:bg-gray-600">REGLAS</Link>
