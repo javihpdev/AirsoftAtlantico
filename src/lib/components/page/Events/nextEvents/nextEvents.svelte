@@ -12,6 +12,6 @@
 	month="OCT"
 	year="2027"
 	location="Arico"
-	img="images/galleryImages/_M1A3546.avif"
+	img="images/galleryImages/_M1A3381.avif"
     typeEvent="Próximo Evento"
 />
