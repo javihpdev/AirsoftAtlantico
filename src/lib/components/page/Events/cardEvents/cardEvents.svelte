@@ -31,9 +31,15 @@
 </script>
 
 <div
-	class="relative flex w-full max-w-md flex-col gap-4 rounded-xl bg-[url('images/events/fondoEvent.png')] bg-cover text-white shadow-lg lg:h-120 lg:w-1/4 lg:max-w-none"
+	class="relative isolate flex w-full max-w-md flex-col gap-4 rounded-xl text-white shadow-lg lg:h-120 lg:w-1/4 lg:max-w-none"
 >
-	<div class="relative h-44 w-full overflow-hidden rounded-t-xl">
+	<img
+		src="/images/events/fondoEvent.png"
+		alt=""
+		aria-hidden="true"
+		class="absolute inset-0 z-0 h-full w-full rounded-xl object-cover"
+	/>
+	<div class="relative z-10 h-44 w-full overflow-hidden rounded-t-xl">
 		<img
 			src={img}
 			alt="Imagen del evento"
@@ -56,7 +62,7 @@
 			</span>
 		</div>
 	</div>
-	<div class="flex flex-col gap-2 px-6 pt-2 text-left">
+	<div class="relative z-10 flex flex-col gap-2 px-6 pt-2 text-left">
 		<h1 class="text-2xl font-bold sm:text-3xl lg:text-3xl">{title}</h1>
 
 		<p class="flex min-w-0 items-center gap-2">
@@ -66,7 +72,7 @@
 
 		<p class="text-lg">{description}</p>
 	</div>
-	<div class="mt-auto flex items-center px-4 pb-4 lg:absolute lg:right-0 lg:bottom-5 lg:left-0 lg:mt-0 lg:pb-0">
+	<div class="relative z-10 mt-auto flex items-center px-4 pb-4 lg:absolute lg:right-0 lg:bottom-5 lg:left-0 lg:mt-0 lg:pb-0">
 		<IconGameMode width={36} height={36} class="shrink-0 text-[#00ACC9] lg:h-[60px] lg:w-[60px]" />
 		<p class="flex pl-2 text-lg lg:w-50 lg:flex-none">{gameMode}</p>
 		<a
